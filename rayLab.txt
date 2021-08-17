@@ -1,4 +1,4 @@
-rayLab.txt 0.0.1                     UTF-8                         2021-08-17
+rayLab.txt 0.0.2                     UTF-8                         2021-08-17
 
                          Native Windows raylib Laboratory
                          ================================
@@ -30,12 +30,16 @@ MANIFEST
 
     .gitattributes
          A declaration of file attributes for use in Git repositories of
-         the nfoTools source code.
+         the rayLab source code.
 
     .gitignore
          A declaration of artifacts to be ignored and excluded from Git
          repositories, applying to working files that are not part of the
          managed archive materials
+
+    rayLab-2021-08-16-2048-raylibShadowing.png
+         image demonstrating a shadow alignment with a raylib clone in the
+         Windows File Explorer.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -70,13 +74,20 @@ TODO
   * Replicate the build-windows.bat case that worked already and that
     shows the different *.obs produced as fixed static components.
 
-  * Add LICENSE.txt and NOTICE.txt with ways to respect the raylib license
+  * Update NOTICE.txt with ways to respect the raylib license
     and those of raylib dependencies.
 
   * Add attribution boilerplates.
 
+  * Figure out whether the wiki or docs/ renderings handle images better than
+    does the imaging of *.md files in the code view, especially the README.
+
+  * Setup discussion and decide whether or not to use docs/ and/or a wiki
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.2 2021-08-17T21:34Z Introduce LICENSE.txt, NOTICE.txt, fix some typos,
+       and manage TODOs
  0.0.1 2021-08-17T15:51Z Adjust to be placeholder along with initial TODOs
  0.0.0 2021-08-17T04:12Z inadvertently-committed copy from nfoTools.txt
        being used as boilerplate.
