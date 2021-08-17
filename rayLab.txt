@@ -1,4 +1,4 @@
-rayLab.txt 0.0.0                     UTF-8                         2021-08-16
+rayLab.txt 0.0.1                     UTF-8                         2021-08-17
 
                          Native Windows raylib Laboratory
                          ================================
@@ -22,11 +22,11 @@ MANIFEST
 
     LICENSE.txt
          The open-source software license that applies to the entire
-         rayLib repository except where stated otherwise.
+         rayLab repository except where stated otherwise.
 
     NOTICE.txt
-         Notice that applies with respect to particular components of
-         the nfoTools collection.
+         Notice that applies with respect to external resources that
+         are incorporated in rayLab, with or without modification.
 
     .gitattributes
          A declaration of file attributes for use in Git repositories of
@@ -39,7 +39,7 @@ MANIFEST
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-                       Copyright 2016 Dennis E. Hamilton
+                       Copyright 2021 Dennis E. Hamilton
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -57,27 +57,29 @@ MANIFEST
 
 TODO
 
-  * Add GitHub Readme.md when ready.
+  * Complete the scaffolding down from here.
 
-  * Cover toolcraft and the intention of relying exclusively on freely-
-    available software tools and libraries.
+  * Complete the .gitattributes and .gitignore for here
 
-  * Explain the licensing approach and handling of open-source code and any
-    contributions to it.
+  * Complete the manifest
+
+  * Add README warning about breaking raylib changes and focus on raylib 4.
+
+  * Complete the construction structure down to projects/scripts
+
+  * Replicate the build-windows.bat case that worked already and that
+    shows the different *.obs produced as fixed static components.
+
+  * Add LICENSE.txt and NOTICE.txt with ways to respect the raylib license
+    and those of raylib dependencies.
 
   * Add attribution boilerplates.
 
-  * Use correct permalinks into master/default branch.
-
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
- 0.0.4 2021-02-06T17:53Z Add docKits/ manifest entry, manage TODOs.
- 0.0.3 2021-01-31T23:18Z Add docs/ manifest entry, manage TODOs
- 0.0.2 2016-12-02-17:39 Complete Staging for the first devKits components.
- 0.0.1 2016-11-30-13:45 Initial setup with devKits/ as the first area for
-       introduction of reusable components.
- 0.0.0 2016-11-30-09:11 Transposition of Adv10.txt 0.0.4 from the Adv10 project
-       for use as boilerplate.
+ 0.0.1 2021-08-17T15:51Z Adjust to be placeholder along with initial TODOs
+ 0.0.0 2021-08-17T04:12Z inadvertently-committed copy from nfoTools.txt
+       being used as boilerplate.
 
 
-                        ***** end of nfoTools.txt *****
+                      ***** end of rayLab.txt *****
