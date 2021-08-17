@@ -1,6 +1,7 @@
 <!-- README.md 0.0.0               UTF-8                          2021-08-16
                      Native Windows raylib Laboratory
      -->
+
 # rayLab
 
 GitHub project orcmid/rayLab is a laboratory for experimental adaptation of
@@ -22,5 +23,12 @@ all of the builds and example exercises in the raylib repository.
 
 More will follow.
 
-<!-- 0.0.0 2021-08-16T23:29Z Simple introductory placeholder
+## Shadowing raylib
+
+![Shadowing with Adjacent Repos](rayLab-2021-08-16-2048-raylibShadowing.png)
+
+
+
+<!-- 0.0.1 2021-08-17T04:02Z Add Example of Adjacent repository clones
+     0.0.0 2021-08-16T23:29Z Simple introductory placeholder
      -->
