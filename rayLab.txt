@@ -1,0 +1,83 @@
+rayLab.txt 0.0.0                     UTF-8                         2021-08-16
+
+                         Native Windows raylib Laboratory
+                         ================================
+
+                        <https://github.com/orcmid/rayLab>
+          <https://github.com/orcmid/raylibLab/blob/master/rayLab.txt>
+
+            EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
+
+                        SHADOWED RAYLIB EXPERIMENTATION
+                        -------------------------------
+
+    [Synopsis TBD]
+
+MANIFEST
+
+    rayLab.txt
+        this manifest and job-jar file
+
+    projects/
+
+    LICENSE.txt
+         The open-source software license that applies to the entire
+         rayLib repository except where stated otherwise.
+
+    NOTICE.txt
+         Notice that applies with respect to particular components of
+         the nfoTools collection.
+
+    .gitattributes
+         A declaration of file attributes for use in Git repositories of
+         the nfoTools source code.
+
+    .gitignore
+         A declaration of artifacts to be ignored and excluded from Git
+         repositories, applying to working files that are not part of the
+         managed archive materials
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2016 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+TODO
+
+  * Add GitHub Readme.md when ready.
+
+  * Cover toolcraft and the intention of relying exclusively on freely-
+    available software tools and libraries.
+
+  * Explain the licensing approach and handling of open-source code and any
+    contributions to it.
+
+  * Add attribution boilerplates.
+
+  * Use correct permalinks into master/default branch.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ 0.0.4 2021-02-06T17:53Z Add docKits/ manifest entry, manage TODOs.
+ 0.0.3 2021-01-31T23:18Z Add docs/ manifest entry, manage TODOs
+ 0.0.2 2016-12-02-17:39 Complete Staging for the first devKits components.
+ 0.0.1 2016-11-30-13:45 Initial setup with devKits/ as the first area for
+       introduction of reusable components.
+ 0.0.0 2016-11-30-09:11 Transposition of Adv10.txt 0.0.4 from the Adv10 project
+       for use as boilerplate.
+
+
+                        ***** end of nfoTools.txt *****

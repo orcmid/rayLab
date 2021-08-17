@@ -1,4 +1,4 @@
-<!-- README.md 0.0.0               UTF-8                          2021-08-16
+<!-- README.md 0.0.2               UTF-8                          2021-08-16
                      Native Windows raylib Laboratory
      -->
 
@@ -25,10 +25,14 @@ More will follow.
 
 ## Shadowing raylib
 
+<center>
+[Shadowing with Adjacent Repos](rayLab-2021-08-16-2048-raylibShadowing.png)
 ![Shadowing with Adjacent Repos](rayLab-2021-08-16-2048-raylibShadowing.png)
+</center>
 
 
 
-<!-- 0.0.1 2021-08-17T04:02Z Add Example of Adjacent repository clones
+<!-- 0.0.2 2021-08-17T04:13Z Add linking caption over centered image
+     0.0.1 2021-08-17T04:02Z Add Example of Adjacent repository clones
      0.0.0 2021-08-16T23:29Z Simple introductory placeholder
      -->
