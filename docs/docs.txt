@@ -1,0 +1,57 @@
+docs.txt 0.0.0                       UTF-8                      dh:2021-08-17
+
+                         Native Windows raylib Laboratory
+                         ================================
+
+         <https://github.com/orcmid/rayLab/blob/master/docs/docs.txt>
+                  <https://orcmid.github.io/rayLab/docs.txt>
+
+EXPERIMENTATION
+    It is not determined, at this moment, whether a GitHub Pages web
+    is needed for the rayLab project.
+
+    This initial setup is to determine whether lossless PNG images are
+    degraded here the same as they are on the project README.md code page.
+
+MANIFEST
+
+    docs.txt
+        this manifest and job-jar file
+
+   index.md
+        markdown form of the home page which becomes the default page
+        <https://orcmid.github.io/rayLab/index.html>
+
+   rayLab-2021-08-16-2048-raylibShadowing.png
+        the screen capture that does not render well at the README.md
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2021 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+TODO
+
+  * Determine whether images are also degraded here under the default
+    template employed for GitHub pages.
+
+  * Determine whether a web documentation site is needed here.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ 0.0.0 2021-08-18T00:03Z Supply minimal boilerplate for the docs/ folder
+
+                          ***** end of docs.txt *****
