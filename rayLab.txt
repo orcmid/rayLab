@@ -1,10 +1,10 @@
-rayLab.txt 0.0.2                     UTF-8                         2021-08-17
+rayLab.txt 0.0.3                     UTF-8                         2021-08-18
 
                          Native Windows raylib Laboratory
                          ================================
 
                         <https://github.com/orcmid/rayLab>
-          <https://github.com/orcmid/raylibLab/blob/master/rayLab.txt>
+          <https://github.com/orcmid/rayLab/blob/master/rayLab.txt>
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
@@ -86,6 +86,7 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.3 2021-08-18T00:08Z Correct the permalink URL to this page on master.
  0.0.2 2021-08-17T21:34Z Introduce LICENSE.txt, NOTICE.txt, fix some typos,
        and manage TODOs
  0.0.1 2021-08-17T15:51Z Adjust to be placeholder along with initial TODOs
