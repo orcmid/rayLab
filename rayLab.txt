@@ -1,4 +1,4 @@
-rayLab.txt 0.0.3                     UTF-8                         2021-08-18
+rayLab.txt 0.0.4                     UTF-8                         2021-08-18
 
                          Native Windows raylib Laboratory
                          ================================
@@ -79,13 +79,15 @@ TODO
 
   * Add attribution boilerplates.
 
-  * Figure out whether the wiki or docs/ renderings handle images better than
-    does the imaging of *.md files in the code view, especially the README.
+  * Figure out whether wiki renderings handle images without degradations
+    as is the case for docs/, but not for the README here.
 
   * Setup discussion and decide whether or not to use docs/ and/or a wiki
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.4 2021-08-18T00:25Z Reflect confirmation that images published via docs/
+       are not degraded.
  0.0.3 2021-08-18T00:08Z Correct the permalink URL to this page on master.
  0.0.2 2021-08-17T21:34Z Introduce LICENSE.txt, NOTICE.txt, fix some typos,
        and manage TODOs
