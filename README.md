@@ -1,4 +1,4 @@
-<!-- README.md 0.0.5               UTF-8                          2021-08-17
+<!-- README.md 0.0.6               UTF-8                          2021-08-20
                      Native Windows raylib Laboratory
      -->
 
@@ -27,17 +27,14 @@ to raylib will happen via a [raylib fork](https://github.com/orcmid/raylib).
 The first step is to establish simple use of VS Build Tools in conducting
 all of the builds and example exercises in the raylib repository.
 
-More will follow.  Yes, I am over-thinking this.
+See [rayLab documentation](https://orcmid.github.io/rayLab/) for any
+specific details.  There's general reliance on
+[nfoTools](https://orcmid.github.io/nfoTools) for prerequisites.  There is
+also rayLab-specific
+[scaffolding here on GitHub](https://github.com/orcmid/rayLab/blob/master/rayLab.txt).
 
-## Shadowing raylib
-
-[Shadowing with Adjacent Repos](rayLab-2021-08-16-2048-raylibShadowing.png)
-
-![Shadowing with Adjacent Repos](rayLab-2021-08-16-2048-raylibShadowing.png)
-
-
-
-<!-- 0.0.5 2021-08-17T15:22Z More text with some links for context
+<!-- 0.0.6 2021-08-20T18:03Z Get rid of the poorly-rendered image. Tidy up.
+     0.0.5 2021-08-17T15:22Z More text with some links for context
      0.0.4 2021-08-17T14:43Z Clean up the shadowing explanation
      0.0.3 2021-08-17T04:17Z Give up on centering
      0.0.2 2021-08-17T04:13Z Add linking caption over centered image
