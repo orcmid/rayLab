@@ -1,4 +1,4 @@
-rayLab.txt 0.0.5                     UTF-8                         2021-08-20
+rayLab.txt 0.0.6                     UTF-8                         2021-08-20
 
                          Native Windows raylib Laboratory
                          ================================
@@ -17,6 +17,17 @@ MANIFEST
 
     rayLab.txt
         this manifest and job-jar file
+
+    raylib/
+        pristine clone of the raysan5/raylib/ repository, excluded from
+        the orcmid/rayLab repository by .gitignore here.  A clone is used
+        for confirming with the latest working master.  For production
+        development projects, a release Zip should be extracted here and
+        renamed back to simply raylib/ so that all project references raylib/
+        the same way regardless of release of clone install.
+
+    raylib-3.7.0.zip
+        latest raylib production-ready release less extras
 
     projects/
 
@@ -62,7 +73,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. Shadowed raylib Experimentation.  rayLab project
-   text file rayLab.txt version 0.0.5 dated 2021-08-20, available on the
+   text file rayLab.txt version 0.0.6 dated 2021-08-20, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/rayLab.txt>
 
@@ -93,6 +104,7 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.6 2021-08-20T22:23Z Incorporate raylib/ directly in this project
  0.0.5 2021-08-20T18:19Z Remove the unusable test image.
  0.0.4 2021-08-18T00:25Z Reflect confirmation that images published via docs/
        are not degraded.

@@ -1,4 +1,4 @@
-# .gitignore 0.0.6                     UTF-8                    dh:2021-08-17
+# .gitignore 0.0.7                     UTF-8                    dh:2021-08-20
 #
 #                                 ORCMID/RAYLAB
 #                                 =============
@@ -16,6 +16,18 @@
 #   jEdit backup and working files
 *~
 *#
+
+## ELIMINATE INCORPORATED RAYLIB ARTIFACTS
+## These are to be kept pristine and any changes made will be to separate
+## clones in support of the raysan5/raylib project. For releases, download
+## from <https://github.com/raysan5/raylib/releases>.  It is necessary to
+## do some magic to have the unzipped folder at the correct level and with
+## a simple name.  Must fix that.
+
+raylib/
+raylib-*/
+raylib-*.zip
+
 
 ## ELIMINATION OF VISUAL STUDIO SOLUTIONS
 ## --------------------------------------
@@ -217,6 +229,8 @@ FakesAssemblies/
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# 0.0.7 2021-08-20T22:11Z Allow for inclusion of raylib/ directly within a
+#       project, excluded from this project's git repository.
 # 0.0.6 2021-08-17T21:43Z Transpose for the orcmid/rayLab GitHub Project
 # 0.0.5 2016-10-04-12:30 Transpose for the orcmid/Adv10 GitHub Project
 #       switching to Semantic Versioning in the process.
