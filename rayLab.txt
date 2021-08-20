@@ -1,4 +1,4 @@
-rayLab.txt 0.0.4                     UTF-8                         2021-08-18
+rayLab.txt 0.0.5                     UTF-8                         2021-08-20
 
                          Native Windows raylib Laboratory
                          ================================
@@ -20,6 +20,10 @@ MANIFEST
 
     projects/
 
+     README.md
+         The introduction page viewed automatically at orcmid/rayLab/ on
+         GitHub
+
     LICENSE.txt
          The open-source software license that applies to the entire
          rayLab repository except where stated otherwise.
@@ -36,10 +40,6 @@ MANIFEST
          A declaration of artifacts to be ignored and excluded from Git
          repositories, applying to working files that are not part of the
          managed archive materials
-
-    rayLab-2021-08-16-2048-raylibShadowing.png
-         image demonstrating a shadow alignment with a raylib clone in the
-         Windows File Explorer.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -58,6 +58,13 @@ MANIFEST
     limitations under the License.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ ATTRIBUTION
+
+   Hamilton, Dennis E. Shadowed raylib Experimentation.  rayLab project
+   text file rayLab.txt version 0.0.5 dated 2021-08-20, available on the
+   Internet as a version of
+   <https://github.com/orcmid/rayLab/blob/master/rayLab.txt>
 
 TODO
 
@@ -82,10 +89,11 @@ TODO
   * Figure out whether wiki renderings handle images without degradations
     as is the case for docs/, but not for the README here.
 
-  * Setup discussion and decide whether or not to use docs/ and/or a wiki
+  * Provide structure and additional pages to /docs
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.5 2021-08-20T18:19Z Remove the unusable test image.
  0.0.4 2021-08-18T00:25Z Reflect confirmation that images published via docs/
        are not degraded.
  0.0.3 2021-08-18T00:08Z Correct the permalink URL to this page on master.
