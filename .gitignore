@@ -1,4 +1,4 @@
-# .gitignore 0.0.8                     UTF-8                    dh:2021-08-21
+# .gitignore 0.0.9                     UTF-8                    dh:2021-08-21
 #
 #                                 ORCMID/RAYLAB
 #                                 =============
@@ -6,15 +6,15 @@
 #              .GITIGNORE FOR KEEPING BUILDS OUT OF THE REPOSITORY
 #
 #   This .gitignore file is designed to eliminate build setups and their
-#   output from being committed to and carried in the repository.  This is
-#   part of a structure where anyone can do multiple flavors of builds
-#   along-side the source without cluttering the repository iself.
+#   output from being committed to and carried in the repository git.  This
+#   supports personal builds and customizations without dirtying the public
+#   GitHub-shared repository content (from orcmid/rayLab in this case).
 
-#   This file is an adaptation of the raylib/.gitignore with added exclusion
-#   of any raylib copies from being treated as inside this project.  raylib
-#   Release Zips and their unzips are also excluded, since they do not need
-#   to be backed up within the project.  There are additional considerations
-#   and variations to be documented though.
+#   This file expands the raylib/.gitignore for exclusion of unpacked
+#   raysan5/raylib folders from orcmid/rayLab.  Additional explanation is a
+#   subject for <https://orcmid.github.io/rayLab> and tutorial materials in
+#   <https://orcmid.github.io/nfoTools>.
+
 
 ## ELIMINATE AUTHORING ARTIFACTS
 ## -----------------------------
@@ -24,22 +24,21 @@
 *#
 
 ## ELIMINATE INCORPORATED RAYLIB ARTIFACTS
-## These are to be kept pristine and any changes made will be to separate
-## clones in support of the raysan5/raylib project. For releases, download
-## from <https://github.com/raysan5/raylib/releases>.  It is necessary to
-## do some magic to have the unzipped folder at the correct level and with
-## a simple name.  Must fix that.
+## These are to be kept pristine with any changes restricted to separate
+## clones that support the raysan5/raylib project. For Source Code (zip) files
+## downloaded from <https://github.com/raysan5/raylib/releases>, some magic
+## is required to have the unzipped folder at the correct level and named
+## "raylib/".
+
+## NOTE: The raylib Zip that is copied or created here is not ignored.
+## This provides for confirmation of the dependency in discussions, incident
+## reports and as a foundation for future replication.
 
 raylib/
 raylib-*/
-raylib-*.zip
-
 
 ## ELIMINATION OF VISUAL STUDIO SOLUTIONS
 ## --------------------------------------
-
-# Do not include working solutions in the repository tree.  Shared
-# solutions are obtained from archives so working solutions are only local
 
 *.sln
 *.vcxproj
@@ -235,6 +234,9 @@ FakesAssemblies/
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# 0.0.9 2021-08-21T19:42Z Streamlining the explanation of having this
+#       .gitignore and the exclusion of raylib/ when installed as a
+#       dependency within a working copy (e.g., of the orcmid/rayLab git).
 # 0.0.8 2021-08-21T17:54Z Explain the exclusing of raylib/ artifacts from
 #       the GitHub project that simply uses copies of them within the project
 #       work space.  raylib clones for contributions are managed differently.
