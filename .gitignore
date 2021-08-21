@@ -1,4 +1,4 @@
-# .gitignore 0.0.7                     UTF-8                    dh:2021-08-20
+# .gitignore 0.0.8                     UTF-8                    dh:2021-08-21
 #
 #                                 ORCMID/RAYLAB
 #                                 =============
@@ -9,6 +9,12 @@
 #   output from being committed to and carried in the repository.  This is
 #   part of a structure where anyone can do multiple flavors of builds
 #   along-side the source without cluttering the repository iself.
+
+#   This file is an adaptation of the raylib/.gitignore with added exclusion
+#   of any raylib copies from being treated as inside this project.  raylib
+#   Release Zips and their unzips are also excluded, since they do not need
+#   to be backed up within the project.  There are additional considerations
+#   and variations to be documented though.
 
 ## ELIMINATE AUTHORING ARTIFACTS
 ## -----------------------------
@@ -229,6 +235,9 @@ FakesAssemblies/
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# 0.0.8 2021-08-21T17:54Z Explain the exclusing of raylib/ artifacts from
+#       the GitHub project that simply uses copies of them within the project
+#       work space.  raylib clones for contributions are managed differently.
 # 0.0.7 2021-08-20T22:11Z Allow for inclusion of raylib/ directly within a
 #       project, excluded from this project's git repository.
 # 0.0.6 2021-08-17T21:43Z Transpose for the orcmid/rayLab GitHub Project
