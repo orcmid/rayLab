@@ -1,0 +1,60 @@
+X210801.txt 0.0.0                   UTF-8                      dh:2021-08-22
+
+                rayLab: Native Windows raylib Laboratory
+                ========================================
+
+<https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210801/X210801.txt>
+        <https://orcmid.github.io/rayLab/experiments/experiments.txt>
+
+                      X210801: SCREEN CAPTURE QUALITY
+                      -------------------------------
+
+PLACEHOLDER
+    Addition of an experiments topic area in the rayLab docs/
+
+MANIFEST
+
+    X210801.txt
+        this manifest and job-jar file
+
+    [ more content TBD ]
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2021 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ ATTRIBUTION
+
+   Hamilton, Dennis E. X210801: Screen Capture Quality.  rayLab project
+   text file experiments.txt version 0.0.0 dated 2021-08-22, available on the
+   Internet as a version of
+   <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210801/X210801.txt>
+
+TODO
+
+  * Add the two images, the original and the degraded one from GitHub code.
+
+  * Add index.md that captures the experiment and results.
+
+  * Reflect in nfoTools cybersmith topic or equivalent.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ 0.0.0 2021-08-22T18:19Z Placeholder for moving/capturing folios of a lab
+       notebook.
+
+                    ***** end of X210801.txt *****
