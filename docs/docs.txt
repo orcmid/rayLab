@@ -1,4 +1,4 @@
-docs.txt 0.0.1                       UTF-8                      dh:2021-08-18
+docs.txt 0.0.2                       UTF-8                      dh:2021-08-22
 
                          Native Windows raylib Laboratory
                          ================================
@@ -6,12 +6,12 @@ docs.txt 0.0.1                       UTF-8                      dh:2021-08-18
          <https://github.com/orcmid/rayLab/blob/master/docs/docs.txt>
                   <https://orcmid.github.io/rayLab/docs.txt>
 
-PROVISIONAL DEMONSTRATION
-    It is not determined, at this moment, whether a GitHub Pages web
-    is needed for the rayLab project.
+                   RAYLAB DOCUMENTATION WEB SITE PUBLISHING
+                   ----------------------------------------
 
-    This initial setup does demonstrate that lossless PNG images are not
-    degraded here the same as they are on the project README.md code page.
+SYNOPSIS
+
+    Source files from which <https://orcmid.github.io/rayLab/> is published.
 
 MANIFEST
 
@@ -22,8 +22,8 @@ MANIFEST
         markdown form of the home page which becomes the default page
         <https://orcmid.github.io/rayLab/index.html>
 
-   rayLab-2021-08-16-2048-raylibShadowing.png
-        the screen capture that does not render well at the README.md
+    experiments/
+        laboratory notebook on experiments with raylib (and GitHub)
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -43,12 +43,19 @@ MANIFEST
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+Hamilton, Dennis E. RayLab Documentation Web Site Publishing.  rayLab project
+   text file docs.txt version 0.0.2 dated 2021-08-22, available on the
+   Internet as a version of
+   <https://github.com/orcmid/rayLab/blob/master/docs/docs.txt>
+
 TODO
 
-  * Determine whether a web documentation site is needed here.
+  * Provide a better introductory page and explanation.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.2 2021-08-22T18:49Z Reflect re-organization and creation of the web form
+       of lab notebook
  0.0.1 2021-08-18T00:21Z Confirmation that images are not degraded.
  0.0.0 2021-08-18T00:03Z Supply minimal boilerplate for the docs/ folder
 
