@@ -1,4 +1,4 @@
-<!-- index.md 0.0.6                 UTF-8                          2021-08-23
+<!-- index.md 0.0.7                 UTF-8                          2021-08-24
                  RAYLAB DOCUMENTATION WEB SITE PUBLISHING
      -->
 
@@ -30,12 +30,13 @@ contributions back to raylib happens via a
 ## Laboratory Notebook
 
 A variety of experiments are catalogued in a web counterpart of a laboratory
-notebook.  The [folder of those notes](../experiments), including a catalog
+notebook.  The [folder of those notes](experiments), including a catalog
 into them, is part of this web site.
 
 
 
-<!-- 0.0.6 2021-08-23T00:36Z Make welcoming page with brief synopsis
+<!-- 0.0.7 2021-08-24T03:5Z Correct link to experiments folder
+     0.0.6 2021-08-23T00:36Z Make welcoming page with brief synopsis
      0.0.5 2021-08-17T15:22Z At docs/index.md More text with some links
            for context
      0.0.4 2021-08-17T14:43Z Clean up the shadowing explanation
