@@ -1,4 +1,4 @@
-<!-- index.md 0.0.2                UTF-8                          2021-08-24
+<!-- index.md 0.0.3                UTF-8                          2021-08-23
                         RAYLAB LABORATORY NOTEBOOK
      -->
 
@@ -13,9 +13,10 @@ sequential identifications.
 
 | Note ID | Started | Latest | Topic |
 |   :-:   |   :-:   |  :-:   |  ---  |
-| [X210801](X210801)|2021-08-23 | 2021-08-23 | Screen Capture Quality |
+| [X210801](X210801)|2021-08-23 | 2021-08-23 | Screen Capture Quality Degradation |
 
-<!-- 0.0.2 2021-08-24T03:41Z Correct title in header comment
-     0.0.1 2021-08-24T03:34Z Fix typo in table row
-     0.0.0 2021-08-24T02:00Z Simple Experiments placeholder cover
+<!-- 0.0.3 2021-08-23T20:20Z Improve X210801 topic, correct earlier timetamps
+     0.0.2 2021-08-23T03:41Z Correct title in header comment
+     0.0.1 2021-08-23T03:34Z Fix typo in table row
+     0.0.0 2021-08-23T02:00Z Simple Experiments placeholder cover
      -->

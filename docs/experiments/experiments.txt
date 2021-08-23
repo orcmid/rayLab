@@ -1,4 +1,4 @@
-experiments.txt 0.0.0                UTF-8                      dh:2021-08-22
+experiments.txt 0.0.1                UTF-8                      dh:2021-08-23
 
                      rayLab: Native Windows raylib Laboratory
                      ========================================
@@ -9,16 +9,17 @@ experiments.txt 0.0.0                UTF-8                      dh:2021-08-22
                            RAYLAB LABORATORY NOTEBOOK
                            --------------------------
 
-PLACEHOLDER
-    Addition of an experiments topic area in the rayLab docs/
+    rayLab docs/ collection of notes on experiments and their results
 
 MANIFEST
 
     experiments.txt
         this manifest and job-jar file
 
-    [ more content TBD ]
+    index.md
+        experiments default page with the catalog of notes
 
+    X210801/    Screen Capture Quality Degradation
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
                        Copyright 2021 Dennis E. Hamilton
@@ -46,12 +47,15 @@ MANIFEST
 
 TODO
 
-  * Add experiment folios
+ * Experiment on unpacking releases
 
-  * Add catalog of experiments at this level
+ * Experiment on packing releases better(?)
+
+ * Experiment on having multiple clones of raylib (We know the answer?)
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.1 2021-08-23T20:18Z Syncrhonize to reflect added content, manage TODOs
  0.0.0 2021-08-22T17:57Z Placeholder for moving/capturing folios of a lab
        notebook.
 
