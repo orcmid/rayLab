@@ -1,4 +1,4 @@
-X210801.txt 0.0.0                   UTF-8                      dh:2021-08-22
+X210801.txt 0.0.1                   UTF-8                      dh:2021-08-23
 
                 rayLab: Native Windows raylib Laboratory
                 ========================================
@@ -17,7 +17,7 @@ MANIFEST
     X210801.txt
         this manifest and job-jar file
 
-    [ more content TBD ]
+    X210801-2021-08-16-2048-raylibShadowing.png
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -40,7 +40,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. X210801: Screen Capture Quality.  rayLab project
-   text file experiments.txt version 0.0.0 dated 2021-08-22, available on the
+   text file experiments.txt version 0.0.1 dated 2021-08-23, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210801/X210801.txt>
 
@@ -54,6 +54,8 @@ TODO
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.1 2021-08-23T19:37Z Include the original image that revealed undesirable
+       down-sampling.
  0.0.0 2021-08-22T18:19Z Placeholder for moving/capturing folios of a lab
        notebook.
 
