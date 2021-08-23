@@ -7,16 +7,16 @@
 ## Summary
 
 The GitHub site presents down-sampled (degraded) versions of image files
-when they are viewed in "<> Code".  The limitation extends to image files
-incorporated in rendered Markdown files, such as README.md in "<>" Code.
+when they are viewed in "`<> Code`".  The limitation extends to image files
+incorporated in rendered Markdown files, such as `README.md` in "`<> Code`".
 
 ## Mitigation
 
-Detailed images should not be incorporated in Markdown (.md) pages intended
+Detailed images should not be incorporated in Markdown (`.md`) pages intended
 to be viewed directly via navigation around github.com project repositories.
 
-It is also generally good practice to keep images lossless (.png instead of
-.jpg), viewed large, and cropped to the essential material.  Full-screen
+It is also generally good practice to keep images lossless (`.png` instead of
+`.jpg`), viewed large, and cropped to the essential material.  Full-screen
 captures are generally not advisable for presentation in complete detail.
 
 ## Avoidance
@@ -36,8 +36,8 @@ was originally intended for presentation in the orcmid/rayLab README file.
 Viewing of that image is degraded when retrieved via
 [GitHub <> Code view](https://github.com/orcmid/rayLab/blob/main/docs/experiments/X210801/X210801-2021-08-16-2048-raylibShadowing.png).
 Contrast that view with the one obtained by directly accessing the same
-image source directly from its
-[orcmid.github.io web location](https://orcmid.github.io/rayLab/experiments/X210801/X210801-2021-08-16-2048-raylibShadowing.png).
+image file directly from its
+[orcmid.github.io web location](https://orcmid.github.io/rayLab/experiments/X210801/X210801-2021-08-16-2048-raylibShadowing.png), enlarging the browser window until full detail appears.
 
 ## Reproducibility
 
@@ -49,5 +49,6 @@ from the [orcmid.github.io X210801 location](X210801-2021-08-23-1244-TheDownSamp
 
 ![observed degradation](X210801-2021-08-23-1244-TheDownSampling.png).
 
-<!-- 0.0.0 2021-08-23T21:24Z Draft description of the experimental findings.
+<!-- 0.0.1 2021-08-23T21:35Z Touch-ups following proof-reading.
+     0.0.0 2021-08-23T21:24Z Draft description of the experimental findings.
      -->
