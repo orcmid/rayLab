@@ -1,4 +1,4 @@
-docs.txt 0.0.2                       UTF-8                      dh:2021-08-22
+docs.txt 0.0.3                       UTF-8                      dh:2021-08-23
 
                          Native Windows raylib Laboratory
                          ================================
@@ -43,17 +43,22 @@ MANIFEST
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Hamilton, Dennis E. RayLab Documentation Web Site Publishing.  rayLab project
-   text file docs.txt version 0.0.2 dated 2021-08-22, available on the
-   Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/docs/docs.txt>
+ATTRIBUTION
+
+    Hamilton, Dennis E. RayLab Documentation Web Site Publishing.  rayLab
+    project text file docs.txt version 0.0.3 dated 2021-08-23, available
+    on the Internet as a version of
+    <https://github.com/orcmid/rayLab/blob/master/docs/docs.txt>
 
 TODO
 
   * Provide a better introductory page and explanation.
 
+  * Expand on "shadowing" and how it works somewhere.  As needed?
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.3 2021-08-23T00:31Z Update for alignment with the new index.md
  0.0.2 2021-08-22T18:49Z Reflect re-organization and creation of the web form
        of lab notebook
  0.0.1 2021-08-18T00:21Z Confirmation that images are not degraded.
