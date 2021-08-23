@@ -1,4 +1,4 @@
-X210801.txt 0.0.1                   UTF-8                      dh:2021-08-23
+X210801.txt 0.0.2                   UTF-8                      dh:2021-08-23
 
                 rayLab: Native Windows raylib Laboratory
                 ========================================
@@ -18,6 +18,7 @@ MANIFEST
         this manifest and job-jar file
 
     X210801-2021-08-16-2048-raylibShadowing.png
+    X210801-2021-08-23-1244-TheDownSampling.png
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -40,20 +41,23 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. X210801: Screen Capture Quality.  rayLab project
-   text file experiments.txt version 0.0.1 dated 2021-08-23, available on the
+   text file experiments.txt version 0.0.2 dated 2021-08-23, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210801/X210801.txt>
 
 TODO
 
-  * Add the two images, the original and the degraded one from GitHub code.
-
   * Add index.md that captures the experiment and results.
 
   * Reflect in nfoTools cybersmith topic or equivalent.
 
+  * Remark that this is not the latest approach to shadowing.  That will be
+    covered under use of releases and then maybe use of clones too.
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.2 2021-08-23T20:00Z Include the demonstration of degradation with
+       unavoidable down-sampling.
  0.0.1 2021-08-23T19:37Z Include the original image that revealed undesirable
        down-sampling.
  0.0.0 2021-08-22T18:19Z Placeholder for moving/capturing folios of a lab
