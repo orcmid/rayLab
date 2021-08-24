@@ -1,4 +1,4 @@
-<!-- index.md 0.0.8                 UTF-8                          2021-08-24
+<!-- index.md 0.0.9                 UTF-8                          2021-08-24
                  RAYLAB DOCUMENTATION WEB SITE PUBLISHING
      -->
 
@@ -16,7 +16,7 @@ Freely-available tools are featured:
 * Microsoft Visual Studio Build Tools for compiling, testing, and deploying
 * Microsoft Visual Studio Code for editing and integrated operation
 
-The goal is to facilitate development is on Windows 10/11 desktop PCs with
+RayLab facilitate development on Windows 10/11 desktop PCs with
 results targetted for the same platforms, potentially distributed via the
 Windows Store.  The critical characteristic is reliance on raylib for all
 graphical functions.
@@ -33,7 +33,8 @@ A variety of experiments are catalogued in a web counterpart of a laboratory
 notebook.  The [folder of those notes](experiments), including a catalog
 into them, is part of this web site.
 
-<!-- 0.0.8 2021-08-23T21:43Z Small touch-ups
+<!-- 0.0.9 2021-08-24T20:42Z more touch-ups
+     0.0.8 2021-08-23T21:43Z Small touch-ups
      0.0.7 2021-08-23T03:51Z Correct link to experiments folder
      0.0.6 2021-08-23T00:36Z Make welcoming page with brief synopsis
      0.0.5 2021-08-17T15:22Z At docs/index.md More text with some links
