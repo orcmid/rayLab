@@ -1,0 +1,78 @@
+X210802.txt 0.0.0                   UTF-8                      dh:2021-08-27
+
+                 rayLab: Native Windows raylib Laboratory
+                 ========================================
+
+<https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210802/X210802.txt>
+      <https://orcmid.github.io/rayLab/experiments/X210802/X210802.txt>
+
+            X210802: INSTALLING RAYLIB INSIDE WINDOWS PROJECTS
+            --------------------------------------------------
+
+    The practice of having copies of raylib held inside projects that use the
+    library is demonstrated.  The practice makes raylib version dependency
+    clear and reproducible.  It also allows the dependencies between the
+    projects build operations and the location of raylib materials to be
+    entirely relative inside the location of the project being developed.
+
+MANIFEST
+
+    X210802.txt
+        this manifest and job-jar file
+
+    index.md
+        X210802 Documentation of Confirming Experiments
+
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                       Copyright 2021 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ ATTRIBUTION
+
+   Hamilton, Dennis E. X210802: Installing raylib Inside Windows Projects.
+   rayLab experiments notebook file X210802.txt version 0.0.0 dated
+   2021-08-27, available on the Internet as a version of
+   <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210802/X210802.txt>
+
+TODOS
+
+ * Capture a .gitignore that avoids preservation of the expanded raylib
+   folder, since it is unchanging and should not be preserved as part of
+   the containing project.
+
+ * Demonstrate downloading of a specific stable raylib release.
+
+ * Address downloading of the latest under-development version if asked to
+   confirm whether an issue remains present or not.  There are advanced
+   conditions for this, since breaking changes may show up apart from the
+   issue of concern.  Workarounds then matter.
+
+ * Show how to extract the raylib/ folder alongside the downloaded .zip
+   file.  See if that can be done by dragging from the opened Zip.
+
+ * Otherwise, show the alternative.
+
+ * Determine what works to have a clone in place of a Zip extraction.
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+ 0.0.0 2021-08-27T00:34Z Placeholder for screencaptures and work items for
+       the confirming experiments.
+
+                    ***** end of X210802.txt *****
