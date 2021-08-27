@@ -1,4 +1,4 @@
-# .gitattributes 0.0.3             UTF-8                        dh:2021-08-16
+# .gitattributes 0.0.4             UTF-8                        dh:2021-08-27
 #
 #                GIT ATTRIBUTES FOR THE rayLab GIT REPOSITORY
 
@@ -22,6 +22,16 @@
 *.suo binary
 *.zip binary
 
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+*.vsd binary
+*.vsdx binary
+
 *.odt binary
 *.ott binary
 *.ods binary
@@ -33,6 +43,7 @@
 *.odm binary
 *.odb binary
 
+# 0.0.4 2021-08-27T17:58Z Add more binary file document formats
 # 0.0.3 2021-08-17T02:04Z Bring over as a started on rayLib.
 # 0.0.2 2021-02-14T00:59Z Customize for docEng, with some known-binary files
 #       likely to appear in this repository
