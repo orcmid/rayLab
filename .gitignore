@@ -1,4 +1,4 @@
-# .gitignore 0.0.10                     UTF-8                    dh:2021-08-27
+# .gitignore 0.0.11                     UTF-8                    dh:2021-08-27
 #
 #                                 ORCMID/RAYLAB
 #                                 =============
@@ -31,8 +31,10 @@
 ## is required to have the unzipped folder at the correct level and named
 ## "raylib/".
 
-## NOTE: The raylib Zip that is downloaded and used her is not ignored.
-## This provides for confirmation of the dependency in the current project.
+## NOTE: The raylib Zip that is downloaded and used is not ignored.
+## Including it in the project provides for confirmation of the dependency
+## and restoration of that raylib/ copy if needed in a future replication of
+## this project.
 
 raylib/
 raylib-*/
@@ -234,6 +236,7 @@ FakesAssemblies/
 
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# 0.0.11 2021-08-27T01:09Z Explaining raylib .zip backed up with project.
 # 0.0.10 2021-08-27T01:03Z Update with connection to X210802 here.
 # 0.0.9 2021-08-21T19:42Z Streamlining the explanation of having this
 #       .gitignore and the exclusion of raylib/ when installed as a
