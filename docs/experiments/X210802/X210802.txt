@@ -1,4 +1,4 @@
-X210802.txt 0.0.0                   UTF-8                      dh:2021-08-27
+X210802.txt 0.0.1                   UTF-8                      dh:2021-08-27
 
                  rayLab: Native Windows raylib Laboratory
                  ========================================
@@ -45,7 +45,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. X210802: Installing raylib Inside Windows Projects.
-   rayLab experiments notebook file X210802.txt version 0.0.0 dated
+   rayLab experiments notebook file X210802.txt version 0.0.1 dated
    2021-08-27, available on the Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210802/X210802.txt>
 
@@ -67,11 +67,27 @@ TODOS
 
  * Otherwise, show the alternative.
 
- * Determine what works to have a clone in place of a Zip extraction.
+ * Determine what works to have a clone in place of a Zip extraction.  I am
+   thinking this is simply a bad idea.  One could do it if set up to keep
+   testing with builds of an in-progress raylib, but maybe that becomes into
+   a separate clone of ones own repo to see how to version.  Or maybe this is
+   done with branching to keep a project aligned with developments on raylib.
+   This takes more thought.
+
+ * Add .gitattributes to the conversation also.  This is also an nfoTools
+   consideration.
+
+ * Find out if .pdf is a binary format or not, for .gitattributes purposes.
+   Maybe it should be treated as binary just because.
+
+ * Do progressive disclosure.  Make side folders of the form X210802x, for
+   x a letter.  Or should I just do them as .md files?
+
+ * Figure out why there is no .gitattributes on raylib.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
+ 0.0.1 2021-08-27T16:45Z Manage TODOs, prepare for sidefolders.
  0.0.0 2021-08-27T00:34Z Placeholder for screencaptures and work items for
        the confirming experiments.
 
