@@ -1,4 +1,4 @@
-<!-- index.md 0.0.0                UTF-8                          2021-08-27
+<!-- index.md 0.0.1                UTF-8                          2021-08-28
               X210802: INSTALLING RAYLIB INSIDE WINDOWS PROJECTS
      -->
 
@@ -7,23 +7,43 @@
 ## Synopsis
 
 It's useful to include the raylib code inside of a project that relies on
-raylib for graphical functions.  This will have the raylib code compiled along
-with that of the containing project.  This streamlined operation eliminates
-the complicated matching of compilation options between a project and
-a separate (shared) library.  The cost of including unused raylib components
-is minimal.
+raylib graphical functions.  The raylib code is not manipulated in the
+project.  The raylib copy is carried within the project for easy location
+and for stability.  The raylib code is then directly compiled along with
+the containing project's code to make a complete program.  It is all
+self-contained.
 
-The raylib code should not be touched in the project.  It will simply be
-carried inside the project so that the dependency is internal.  It will also
-be convenient for updating to a newer raylib version and confirming that
-the overall project continues to build properly.  This works best if the
-raylib-depending project is also managed with git (and optionally, GitHub).
+The inside-project setup of raylib is used in the orcmid/rayLab project.
+That setup is used for illustration.
 
-Using orcmid/rayLab for illustration, the goal is to have an arrangement
-of a raylib release similar to how it appears within this Windows File
-Explorer view.
+## The Objective
+
+When a raylib release is installed in a project, the view in Windows File
+Explorer will resemble this one of orcmid/rayLab on a Windows 10 PC.
 
 ![rayLab with raylib inside](X210802-2021-08-26-2014-TheResult.png)
 
-<!-- 0.0.0 2021-08-27T18:45Z Draft placeholder of the confirmed setup.
+The important features are
+
+* This is the top level of the `rayLab/` project files.
+* There is a `raylib` folder at that level.
+* Folder `raylib` content is from the `raylib-3.7.0.zip` included in the
+project.
+
+This is achieved in three steps.
+
+1. [Arranging Git\[Hub\] for raylib Inside Windows Projects](X210802a).  For a Git-supported project such as rayLab, `.gitattributes` and
+`.gitignore` files are used to treat the `raylib` folder and the
+`raylib-3.7.0.zip` file properly once they are introduced.  This step is
+required only when Git is used.
+
+2. The source code `.zip` for a raylib release is downloaded.
+
+3. The `raylib` folder is created from the `.zip` content.
+
+Further developments, including confirmation of the setup, are accomplished
+in additional steps.
+
+<!-- 0.0.1 2021-08-28T04:28Z Sketch the procedure and its objective.
+     0.0.0 2021-08-27T18:45Z Draft placeholder of the confirmed setup.
      -->
