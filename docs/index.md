@@ -1,39 +1,52 @@
-<!-- index.md 0.0.9                 UTF-8                          2021-08-24
+<!-- index.md 0.0.10                UTF-8                          2021-08-28
                  RAYLAB DOCUMENTATION WEB SITE PUBLISHING
      -->
 
 # rayLab: Native Windows raylib Laboratory
 
-## Synopsis
+GitHub project [orcmid/rayLab](https://github.com/orcmid/rayLab) is a
+laboratory for experimental adaptation of GitHub project
+[raysan5/raylib](https://github.com/raysan5/raylib) libraries for native
+Windows desktop PC applications, especially graphical games.
 
-GitHub project `orcmid/rayLab` is a laboratory for experimental adaptation of
-GitHub [raysan5/raylib](https://github.com/raysan5/raylib) libraries for
-native Windows desktop PC applications, especially graphical games.
+RayLab is devoted to teasing out an on-ramp for introduction of beginners and
+casual developers to the development of PC-based video games. Newcomers should
+find this useful preparation for going further in available on-line courses,
+community projects, and courses of study.
 
-Freely-available tools are featured:
+Required tools are freely-available at no cost:
 
-* git and gitHub for backup and change management
+* Git and GitHub for backup and change management (optional and recommended)
 * Microsoft Visual Studio Build Tools for compiling, testing, and deploying
 * Microsoft Visual Studio Code for editing and integrated operation
 
-RayLab facilitate development on Windows 10/11 desktop PCs with
-results targetted for the same platforms, potentially distributed via the
+All work is in Clean C, a subset common to C and C++ (C/C++) languages for
+straightforward programming without dependence on elaborate features of C++.
+The amount of novelty that a beginner must grasp at once is minimized by
+sticking to fundamentals of this useful family of languages.  Clean C is an
+appropriate starter for working toward C++ fluency.
+
+## Development On and For Windows
+
+RayLab targets development on Windows 10/11 desktop PCs with
+results targetted for the same platforms, potentially distributable via the
 Windows Store.  The critical characteristic is reliance on raylib for all
 graphical functions.
 
-rayLab shadows GitHub project `raysan5/raylib`, mimicking that structure
-in the location of lab experiments.  Experimental customizations and
-expansions of raylib materials are at corresponding shadow locations.  Any
-contributions back to raylib happens via a
+rayLab's GitHub project `orcmid/rayLab`, mimics the structure of GitHub
+project `raysan5/raylib` for locating experiments and demonstrations.
+Any contributions back to raylib are introduced separately via the
 [raylib fork](https://github.com/orcmid/raylib).
 
 ## Laboratory Notebook
 
-A variety of experiments are catalogued in a web counterpart of a laboratory
+Various experiments are catalogued in a web counterpart of laboratory
 notebook.  The [folder of those notes](experiments), including a catalog
-into them, is part of this web site.
+into them, is part of this web site.  These are starter experiments for
+confirming rayLab-derived setups.
 
-<!-- 0.0.9 2021-08-24T20:42Z more touch-ups
+<!-- 0.0.10 2021-08-28T16:26Z smoothing with more explanation
+     0.0.9 2021-08-24T20:42Z more touch-ups
      0.0.8 2021-08-23T21:43Z Small touch-ups
      0.0.7 2021-08-23T03:51Z Correct link to experiments folder
      0.0.6 2021-08-23T00:36Z Make welcoming page with brief synopsis
