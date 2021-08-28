@@ -1,4 +1,4 @@
-X210802.txt 0.0.2                   UTF-8                      dh:2021-08-28
+X210802.txt 0.0.3                   UTF-8                      dh:2021-08-28
 
                  rayLab: Native Windows raylib Laboratory
                  ========================================
@@ -68,11 +68,6 @@ TODOS
    conditions for this, since breaking changes may show up apart from the
    issue of concern.  Workarounds then matter.
 
- * Show how to extract the raylib/ folder alongside the downloaded .zip
-   file.  See if that can be done by dragging from the opened Zip.
-
- * Otherwise, show the alternative.
-
  * Determine what works to have a clone in place of a Zip extraction.  I am
    thinking this is simply a bad idea.  One could do it if set up to keep
    testing with builds of an in-progress raylib, but maybe that becomes into
@@ -80,16 +75,24 @@ TODOS
    done with branching to keep a project aligned with developments on raylib.
    This takes more thought.
 
- * Do progressive disclosure.  Make side files of the form X210802x, for
-   x a letter.
+  * Proof-read X210802a with an eye to beginner's mind.
 
- * Proof-read X210802a with an eye to beginner's mind.
+  * Remember to credit the idea of installing raylib inside a project to
+    seeing that promoted by @JeffM2501 (Jeffery Myers).
 
- * Link to X210802a from X210802 index.md.  Expand that index.md to make the
-   treatment workable for beginners.
+  * Need to work in an explanation of the use of the Apache license and having
+    it apply here as essentially CCbye with specified attributions.
+
+  * Need to incorporate the raylib licenses at some point in NOTICE and also
+    in textual references/mentions.
+
+  * Which version and touching is recorded in the experiments/ catalog?  It
+    is probably the most accurate to use this note's versioning, although
+    that is not visible in the HTML files.  This is touched the most though.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.3 2021-08-28T20:36Z Touch-ups and manage TODOs
  0.0.2 2021-08-28T01:27Z Catch up with X210802a
  0.0.1 2021-08-27T16:45Z Manage TODOs, prepare for sidefolders.
  0.0.0 2021-08-27T00:34Z Placeholder for screencaptures and work items for
