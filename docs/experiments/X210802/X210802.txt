@@ -1,4 +1,4 @@
-X210802.txt 0.0.1                   UTF-8                      dh:2021-08-27
+X210802.txt 0.0.2                   UTF-8                      dh:2021-08-28
 
                  rayLab: Native Windows raylib Laboratory
                  ========================================
@@ -12,8 +12,13 @@ X210802.txt 0.0.1                   UTF-8                      dh:2021-08-27
     The practice of having copies of raylib held inside projects that use the
     library is demonstrated.  The practice makes raylib version dependency
     clear and reproducible.  It also allows the dependencies between the
-    projects build operations and the location of raylib materials to be
-    entirely relative inside the location of the project being developed.
+    project build operations and the location of raylib materials to be
+    consistently relative from inside the location of the project when raylib
+    is updated and when multiple projects are created using the same
+    technique.
+
+    The setup is intended to be workable by novices whether or not they are
+    relying on Git[Hub] for source-code management and change control.
 
 MANIFEST
 
@@ -21,8 +26,13 @@ MANIFEST
         this manifest and job-jar file
 
     index.md
-        X210802 Documentation of Confirming Experiments
+        Installing raylib Inside Windows Projects
+    X210802-2021-08-26-2014-TheResult.png
 
+    X210802a.md
+        Arranging Git for raylib Inside Windows Projects
+    X210802-2021-08-26-1811-The.gitignore.png
+    X210802-2021-08-27-0814-.gitattributes.png
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -45,15 +55,11 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. X210802: Installing raylib Inside Windows Projects.
-   rayLab experiments notebook file X210802.txt version 0.0.1 dated
+   rayLab experiments notebook file X210802.txt version 0.0.2 dated
    2021-08-27, available on the Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210802/X210802.txt>
 
 TODOS
-
- * Capture a .gitignore that avoids preservation of the expanded raylib
-   folder, since it is unchanging and should not be preserved as part of
-   the containing project.
 
  * Demonstrate downloading of a specific stable raylib release.
 
@@ -74,19 +80,17 @@ TODOS
    done with branching to keep a project aligned with developments on raylib.
    This takes more thought.
 
- * Add .gitattributes to the conversation also.  This is also an nfoTools
-   consideration.
+ * Do progressive disclosure.  Make side files of the form X210802x, for
+   x a letter.
 
- * Find out if .pdf is a binary format or not, for .gitattributes purposes.
-   Maybe it should be treated as binary just because.
+ * Proof-read X210802a with an eye to beginner's mind.
 
- * Do progressive disclosure.  Make side folders of the form X210802x, for
-   x a letter.  Or should I just do them as .md files?
-
- * Figure out why there is no .gitattributes on raylib.
+ * Link to X210802a from X210802 index.md.  Expand that index.md to make the
+   treatment workable for beginners.
 
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+ 0.0.2 2021-08-28T01:27Z Catch up with X210802a
  0.0.1 2021-08-27T16:45Z Manage TODOs, prepare for sidefolders.
  0.0.0 2021-08-27T00:34Z Placeholder for screencaptures and work items for
        the confirming experiments.
