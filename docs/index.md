@@ -1,4 +1,4 @@
-<!-- index.md 0.0.11                UTF-8                          2021-08-28
+<!-- index.md 0.0.12                UTF-8                          2021-08-28
                  RAYLAB DOCUMENTATION WEB SITE PUBLISHING
      -->
 
@@ -17,7 +17,7 @@ community projects, and formal courses of study.
 All programming work is in Clean C, a subset common to C and C++ (C/C++)
 languages for straightforward programming without dependence on elaborate
 features of C++.  The amount of novelty that a beginner must grasp at once
-is minimized by sticking to fundamentals of this useful family of languages.
+is reduced by sticking to fundamentals of this useful family of languages.
 Clean C is an appropriate starter for evolving toward C++ fluency.
 
 ## Prerequisites
@@ -27,7 +27,8 @@ with these materials and communicating with the rayLab and raylib projects.
 
 Required tools are freely-available at no cost:
 
-* Git and GitHub, a recommended option for backup and change management
+* Git and GitHub, a recommended option for backup, change-management, and
+recovery from misadventures
 * Microsoft Visual Studio Build Tools for compiling, testing, and deploying
 * Microsoft Visual Studio Code for editing and integrated operation
 
@@ -36,7 +37,7 @@ the Microsoft Windows desktop, its File Explorer, a web browser, and PC
 keyboard and mouse (or touchpad) operation.  Safe downloading and
 installation of software is also important, along with Internet connectivity.
 
-Making informative screen captures is important for sharing experiences and
+Making informative screen captures is valuable for sharing experiences and
 reporting difficulties
 
 Emphasis on reproducibility and confirmation of experiences,
@@ -50,13 +51,12 @@ is a prerequisite along with willingness to learn by trial-and-error.
 RayLab features development on Windows 10/11 desktop PCs with
 results targetted for the same platforms, potentially distributable via the
 Windows Store.  The critical characteristic is reliance on raylib for all
-graphical functions and user interactions.
+graphical functions and user interactions while using tools for native
+Windows construction and operation.
 
 rayLab's GitHub project `orcmid/rayLab`, mimics the structure of GitHub
 project `raysan5/raylib` for locating experiments and demonstrations.
-Any contributions back to raylib are introduced separately via the GitHub
-[orcmid/raylib fork](https://github.com/orcmid/raylib).  That will become
-more apparent as experimental confirmations are fleshed out.
+That will become more apparent as experimental confirmations are fleshed out.
 
 ## Laboratory Notebook
 
@@ -65,7 +65,8 @@ notebook.  The [`experiments` folder of those notes](experiments), including
 a catalog into them, is part of this web site.  These are experiments for
 establishing and confirming rayLab-derived setups.
 
-<!-- 0.0.11 2021-08-28T17:27Z more smoothing, expanded prerequisites
+<!-- 0.0.12 2021-08-28T17:42Z and still more smoothing
+     0.0.11 2021-08-28T17:27Z more smoothing, expanded prerequisites
      0.0.10 2021-08-28T16:26Z smoothing with more explanation
      0.0.9 2021-08-24T20:42Z more touch-ups
      0.0.8 2021-08-23T21:43Z Small touch-ups
