@@ -1,4 +1,5 @@
-X210802.txt 0.0.3                   UTF-8                      dh:2021-08-28
+X210802.txt 0.0.4                   UTF-8                      dh:2021-08-30
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                  rayLab: Native Windows raylib Laboratory
                  ========================================
@@ -34,7 +35,7 @@ MANIFEST
     X210802-2021-08-26-1811-The.gitignore.png
     X210802-2021-08-27-0814-.gitattributes.png
 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                        Copyright 2021 Dennis E. Hamilton
 
@@ -50,12 +51,12 @@ MANIFEST
     See the License for the specific language governing permissions and
     limitations under the License.
 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
  ATTRIBUTION
 
    Hamilton, Dennis E. X210802: Installing raylib Inside Windows Projects.
-   rayLab experiments notebook file X210802.txt version 0.0.2 dated
+   rayLab experiments notebook file X210802.txt version 0.0.4 dated
    2021-08-27, available on the Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210802/X210802.txt>
 
@@ -90,8 +91,9 @@ TODOS
     is probably the most accurate to use this note's versioning, although
     that is not visible in the HTML files.  This is touched the most though.
 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.4 2021-08-30T20:01Z add rulers
  0.0.3 2021-08-28T20:36Z Touch-ups and manage TODOs
  0.0.2 2021-08-28T01:27Z Catch up with X210802a
  0.0.1 2021-08-27T16:45Z Manage TODOs, prepare for sidefolders.

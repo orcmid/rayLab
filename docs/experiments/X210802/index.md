@@ -1,5 +1,7 @@
-<!-- index.md 0.0.2                UTF-8                          2021-08-28
-              X210802: INSTALLING RAYLIB INSIDE WINDOWS PROJECTS
+<!-- index.md 0.0.3                UTF-8                          2021-08-30
+     ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
+               X210802: INSTALLING RAYLIB INSIDE WINDOWS PROJECTS
      -->
 
 # Experiment X210802: Installing raylib Inside Windows Projects
@@ -48,7 +50,10 @@ step should be revisited.
 Further developments, including confirmation of the setup, are accomplished
 in additional steps.  Additional lab notes will account for that.
 
-<!-- 0.0.2 2021-08-28T20:32Z Touch-ups and some wordsmithing
+<!-- ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
+     0.0.3 2021-08-30T20:04Z add rulers
+     0.0.2 2021-08-28T20:32Z Touch-ups and some wordsmithing
      0.0.1 2021-08-28T04:28Z Sketch the procedure and its objective.
      0.0.0 2021-08-27T18:45Z Draft placeholder of the confirmed setup.
      -->

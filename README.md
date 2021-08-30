@@ -1,4 +1,6 @@
-<!-- README.md 0.0.6               UTF-8                          2021-08-20
+<!-- README.md 0.0.7               UTF-8                          2021-08-30
+     ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
                      Native Windows raylib Laboratory
      -->
 
@@ -33,7 +35,8 @@ specific details.  There's general reliance on
 also rayLab-specific
 [scaffolding here on GitHub](https://github.com/orcmid/rayLab/blob/master/rayLab.txt).
 
-<!-- 0.0.6 2021-08-20T18:03Z Get rid of the poorly-rendered image. Tidy up.
+<!-- 0.0.7 2021-08-30T19:40Z add ruler
+     0.0.6 2021-08-20T18:03Z Get rid of the poorly-rendered image. Tidy up.
      0.0.5 2021-08-17T15:22Z More text with some links for context
      0.0.4 2021-08-17T14:43Z Clean up the shadowing explanation
      0.0.3 2021-08-17T04:17Z Give up on centering

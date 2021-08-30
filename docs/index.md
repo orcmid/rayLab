@@ -1,4 +1,6 @@
 <!-- index.md 0.0.12                UTF-8                          2021-08-28
+     ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
                  RAYLAB DOCUMENTATION WEB SITE PUBLISHING
      -->
 
@@ -65,7 +67,10 @@ notebook.  The [`experiments` folder of those notes](experiments), including
 a catalog into them, is part of this web site.  These are experiments for
 establishing and confirming rayLab-derived setups.
 
-<!-- 0.0.12 2021-08-28T17:42Z and still more smoothing
+<!-- ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
+     0.0.13 2021-08-30T19:52Z add rulers
+     0.0.12 2021-08-28T17:42Z and still more smoothing
      0.0.11 2021-08-28T17:27Z more smoothing, expanded prerequisites
      0.0.10 2021-08-28T16:26Z smoothing with more explanation
      0.0.9 2021-08-24T20:42Z more touch-ups
@@ -79,4 +84,8 @@ establishing and confirming rayLab-derived setups.
      0.0.2 2021-08-17T04:13Z Add linking caption over centered image
      0.0.1 2021-08-17T04:02Z Add Example of Adjacent repository clones
      0.0.0 2021-08-16T23:29Z Simple introductory README.md placeholder
+
+     ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
+                   *** end of docs/index.md ***
      -->

@@ -1,4 +1,5 @@
-experiments.txt 0.0.2                UTF-8                      dh:2021-08-26
+experiments.txt 0.0.3                UTF-8                      dh:2021-08-30
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                      rayLab: Native Windows raylib Laboratory
                      ========================================
@@ -21,7 +22,8 @@ MANIFEST
 
     X210801/    Screen Capture Quality Degradation
     X210802/    Installing raylib Inside Windows Projects
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                        Copyright 2021 Dennis E. Hamilton
 
@@ -37,7 +39,7 @@ MANIFEST
     See the License for the specific language governing permissions and
     limitations under the License.
 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
  ATTRIBUTION
 
@@ -54,8 +56,9 @@ TODO
 
  * Experiment on having multiple clones of raylib (We know the answer?)
 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.3 2021-08-30T19:54Z add rulers
  0.0.2 2021-08-27T00:36Z Anticipate introduction of X210802.
  0.0.1 2021-08-23T20:18Z Syncrhonize to reflect added content, manage TODOs
  0.0.0 2021-08-22T17:57Z Placeholder for moving/capturing folios of a lab

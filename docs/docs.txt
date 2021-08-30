@@ -1,4 +1,5 @@
-docs.txt 0.0.4                       UTF-8                      dh:2021-08-28
+docs.txt 0.0.5                       UTF-8                      dh:2021-08-30
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
                          ================================
@@ -25,7 +26,7 @@ MANIFEST
     experiments/
         laboratory notebook on experiments with raylib (and GitHub)
 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                        Copyright 2021 Dennis E. Hamilton
 
@@ -41,7 +42,7 @@ MANIFEST
     See the License for the specific language governing permissions and
     limitations under the License.
 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
 ATTRIBUTION
 
@@ -59,8 +60,9 @@ TODO
   * Have more on nfoTools for materials that are widely usable and not
     specific to rayLab.  They can be shared then.
 
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.5 2021-08-30T19:48Z add rulers
  0.0.4 2021-08-28T16:30Z Manage TODOs, reflecting improved index.md
  0.0.3 2021-08-23T00:31Z Update for alignment with the new index.md
  0.0.2 2021-08-22T18:49Z Reflect re-organization and creation of the web form
