@@ -1,4 +1,4 @@
-X210802.txt 0.0.4                   UTF-8                      dh:2021-08-30
+X210802.txt 0.0.5                   UTF-8                      dh:2021-08-31
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                  rayLab: Native Windows raylib Laboratory
@@ -82,7 +82,7 @@ TODOS
     seeing that promoted by @JeffM2501 (Jeffery Myers).
 
   * Need to work in an explanation of the use of the Apache license and having
-    it apply here as essentially CCbye with specified attributions.
+    it apply here as essentially CCby with specified attributions.
 
   * Need to incorporate the raylib licenses at some point in NOTICE and also
     in textual references/mentions.
@@ -91,8 +91,12 @@ TODOS
     is probably the most accurate to use this note's versioning, although
     that is not visible in the HTML files.  This is touched the most though.
 
+  * Use permalinks of the index.html page for forward links from the synopsis.
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.5 2021-08-31T20:09Z Manage TODOs, look at using permalinks as anchor
+       references within in posted pages
  0.0.4 2021-08-30T20:01Z add rulers
  0.0.3 2021-08-28T20:36Z Touch-ups and manage TODOs
  0.0.2 2021-08-28T01:27Z Catch up with X210802a
