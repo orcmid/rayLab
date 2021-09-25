@@ -1,4 +1,4 @@
-projects.txt 0.0.1                  UTF-8                         2021-09-25
+scripts.txt 0.0.0                   UTF-8                         2021-09-25
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -9,25 +9,23 @@ projects.txt 0.0.1                  UTF-8                         2021-09-25
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
-                        SHADOWED RAYLIB PROJECTS FOLDER
-                        -------------------------------
+                      EXPERIMENTAL RAYLIB SCRIPT CASES
+                      --------------------------------
 
-    The raylib/projects consist of various ways to build raylib-dependent
-    projects.
+    The raylib/projects/scripts/ folder contains a variety of scripts that
+    demonstrate compiling for a variety of platforms and toolcrafts.
 
-    The comparable rayLab/projects are designed to fit in a way that can
-    be incorporated in projects that are in shadow structures or inserted
-    directly into a working copy of raylib.
+    This rayLab/projects/scripts is for a variety of comparable script
+    *folders* that work within a project that includes a working copy
+    of raylib in the manner incorporated in the rayLab project.
 
-    Further details will depend on exactly how that works out.
+    Several iterations are made to get to something with the quality of WinCon
+    and is as easily customized, maybe as WinRay.
 
 MANIFEST
 
-    sources.txt
+    scripts.txt
         this manifest and job-jar file
-
-    scripts/
-        development of reusable script cases using VC build environment
 
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
@@ -50,10 +48,10 @@ MANIFEST
 
  ATTRIBUTION
 
-   Hamilton, Dennis E. Shadowed raylib Projects Folder.  rayLab project
-   text file projects.txt version 0.0.1 dated 2021-09-25, available on the
+   Hamilton, Dennis E. Experimental Raylib Script Cases.  rayLab project
+   text file scripts.txt version 0.0.0 dated 2021-09-25, available on the
    Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/projects/projeccts.txt>
+   <https://github.com/orcmid/rayLab/blob/master/projects/scripts/scripts.txt>
 
 TODO
 
@@ -81,11 +79,12 @@ TODO
   * We need to sneak up on this.  Start with simple cases and refine what
     works as we go.
 
+  * Take the raylib/scripts/build-windows.bat and core_basic_windows.c down
+    a level to a raw case.
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
- 0.0.1 2021-09-25T23:17Z introduce scripts/, manage TODOs
- 0.0.0 2021-09-25T22:55Z placeholder for building down to scripts and/or other
-       levels of VC building cases.
+ 0.0.0 2021-09-25T23:14Z placeholder for building down to scripts cases
 
 
                       ***** end of projects.txt *****
