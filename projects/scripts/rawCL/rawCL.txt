@@ -1,4 +1,4 @@
-rawCL.txt 0.0.0                     UTF-8                         2021-09-25
+rawCL.txt 0.0.1                     UTF-8                         2021-09-27
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -30,6 +30,19 @@ MANIFEST
     build-windows.bat
         the raylib file that will be torn down and maybe built back up
 
+    rayLabBuild.opt
+        CL customizable command options file for the rayLab Build
+
+    rayLabSources.opt
+        CL customizable command options for the files to be built/included
+
+    temp/
+        ignored folder for intermediate build materials
+
+    app/
+        folder for the compiled .exe and also any resources that are
+        expected local to the executable
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                        Copyright 2021 Dennis E. Hamilton
@@ -51,7 +64,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rawCL Bare-Bones CL Compile Setup.  rayLab project
-   text file rawCL.txt version 0.0.0 dated 2021-09-25, available on the
+   text file rawCL.txt version 0.0.1 dated 2021-09-27, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/rawCL.txt>
 
@@ -75,8 +88,39 @@ TODO
   * We need to sneak up on this.  Start with simple cases and refine what
     works as we go.
 
+  * The editable .opt files are ways to have them be under source-control,
+    be make dependencies, and also have them be more understandable.
+
+  * I don't know if the separate building of the raylib .obj files is worthy.
+    Some of this has to do with the need to change directories and maybe there
+    is a better way to deal with that.
+
+  * Initially, just build everything, needed or not.  This will be find for
+    compiling examples.
+
+  * The resources folder needs to be in the app folder. That might be sketchy.
+
+  * Need to deal with license combinations.  E.g., the raylib dependency and
+    license, and the license here.  That's normally handled with a NOTICE and
+    maybe that should be the case here.  These executables using raylib
+    examples are clearly all raylib licensed.  If I contribute any new script,
+    it will be under the raylib license and not have any others.  Watch it.
+
+  * The app folder needs to hold some things about what it is about.  Ditto
+    for the temp folder.  It might have its own clean script?
+
+  * I guess they are rayLab options command files.  Maybe that's not quite it,
+    or we can presume someone would know how to rename them for other cases.
+
+  * I am going to be righteous about not doing debugging builds.  There is
+    only one build and it is the one that "ships."  So if there is logging and
+    other provisions (e.g., symbols), they come along for the ride.  The idea
+    is not to have such a crutch in early learning.  Confirmable experience
+    and the ability to analyze is what I want to cultivate.
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.1 2021-09-27T16:40Z Manage TODOs, think outloud about organization
  0.0.0 2021-09-25T23:44Z placeholder for a raw native build
 
 
