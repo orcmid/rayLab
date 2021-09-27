@@ -1,4 +1,4 @@
-rawCL.txt 0.0.1                     UTF-8                         2021-09-27
+rawCL.txt 0.0.2                    UTF-8                         2021-09-27
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -36,7 +36,7 @@ MANIFEST
     rayLabSources.opt
         CL customizable command options for the files to be built/included
 
-    temp/
+    tmp/
         ignored folder for intermediate build materials
 
     app/
@@ -64,7 +64,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rawCL Bare-Bones CL Compile Setup.  rayLab project
-   text file rawCL.txt version 0.0.1 dated 2021-09-27, available on the
+   text file rawCL.txt version 0.0.2 dated 2021-09-27, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/rawCL.txt>
 
@@ -118,8 +118,22 @@ TODO
     is not to have such a crutch in early learning.  Confirmable experience
     and the ability to analyze is what I want to cultivate.
 
+  * I want to keep the scripts and options at the level above app and tmp.
+
+  * Create app/app.txt and tmp/tmp.txt so these files have content always,
+    even though gitignored.
+
+  * Want all scripts and options to be at the rawCL level.  This may make for
+    some odd cases.
+
+  * I think there might be another option file, and the a couple of batch
+    files.
+
+  * Figure out the .gitignore cases to include at this level.
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.2 2021-09-27T18:50Z More TODOs, some tweaking
  0.0.1 2021-09-27T16:40Z Manage TODOs, think outloud about organization
  0.0.0 2021-09-25T23:44Z placeholder for a raw native build
 
