@@ -1,4 +1,4 @@
-tmp.txt 0.0.0                       UTF-8                         2021-09-27
+tmp.txt 0.0.1                       UTF-8                         2021-09-28
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -49,17 +49,32 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rawCL Bare-Bones tmp Folder.  rayLab project
-   text file tmp.txt version 0.0.0 dated 2021-09-27, available on the
+   text file tmp.txt version 0.0.1 dated 2021-09-28, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/tmp/tmp.txt>
 
 TODO
 
+  * If compiling is done here, the question is whether the option files can
+    be accessed at rawCL from down here.  And then what are relative links
+    determined from.
 
-  * Figure out the .gitignore cases to include at this level.
+  * We need VC Toolcraft (in nfoTools) on CL.exe and especially the options
+    files and how things like batch/environment variables and relative links
+    are resolved.
+
+  * Maybe options need to be copied or unzipped to tmp/ to have their
+    customization ignored.  This doesn't quite make sense for rayLab; but it
+    is a devKit case if contributed to raylib.  Hmm.
+
+  * Juggle having the least that could possibly work here.
+
+  * It makes sense to call this folder wrk/ rather than /tmp the way things
+    going.
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.1 2021-09-28T14:28Z Noodling in TODOs
  0.0.0 2021-09-27T23:13Z placeholder for native-build intermediate materials
 
 
