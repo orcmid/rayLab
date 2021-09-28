@@ -1,4 +1,4 @@
-rawCL.txt 0.0.2                    UTF-8                         2021-09-27
+rawCL.txt 0.0.3                     UTF-8                         2021-09-28
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -36,8 +36,8 @@ MANIFEST
     rayLabSources.opt
         CL customizable command options for the files to be built/included
 
-    tmp/
-        ignored folder for intermediate build materials
+    wrk/
+        customizable folder for intermediate materials, parameters, etc.
 
     app/
         folder for the compiled .exe and also any resources that are
@@ -64,7 +64,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rawCL Bare-Bones CL Compile Setup.  rayLab project
-   text file rawCL.txt version 0.0.2 dated 2021-09-27, available on the
+   text file rawCL.txt version 0.0.3 dated 2021-09-28, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/rawCL.txt>
 
@@ -81,15 +81,12 @@ TODO
     This tends to mean that relative links into raylib for includes and
     other artifacts will work properly.
 
-  * We don't want the .obj files and other intermediates in the same location
-    as the compiled .exe.  We want the .exe be in a folder of its own along
-    with any copied resources.
-
   * We need to sneak up on this.  Start with simple cases and refine what
     works as we go.
 
   * The editable .opt files are ways to have them be under source-control,
-    be make dependencies, and also have them be more understandable.
+    be make dependencies, and also have them be more understandable.  The
+    ones used should be customizable outside of a clone though.  Think more.
 
   * I don't know if the separate building of the raylib .obj files is worthy.
     Some of this has to do with the need to change directories and maybe there
@@ -119,20 +116,17 @@ TODO
     and the ability to analyze is what I want to cultivate.
 
   * I want to keep the scripts and options at the level above app and tmp.
-
-  * Create app/app.txt and tmp/tmp.txt so these files have content always,
-    even though gitignored.
+    I am beginning to think having them in wrk/ is appropriate when thinking
+    about these being kits.
 
   * Want all scripts and options to be at the rawCL level.  This may make for
     some odd cases.
 
-  * I think there might be another option file, and the a couple of batch
-    files.
-
-  * Figure out the .gitignore cases to include at this level.
+  * I think there might be another option file, and a couple of batch files.
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.3 2021-09-28T15:00Z Renaming of tmp/ to wrk/, manage TODOs
  0.0.2 2021-09-27T18:50Z More TODOs, some tweaking
  0.0.1 2021-09-27T16:40Z Manage TODOs, think outloud about organization
  0.0.0 2021-09-25T23:44Z placeholder for a raw native build
