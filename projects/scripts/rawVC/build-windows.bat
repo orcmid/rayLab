@@ -1,4 +1,4 @@
-@REM build-windows.bat 0.0.5       UTF-8                          2021-09-29
+@REM build-windows.bat 0.0.6       UTF-8                          2021-09-29
 @REM ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 @echo off
 REM Change your executable name here
@@ -15,7 +15,7 @@ set RAYLIB_SRC=..\..\..\raylib\src
 REM Set the target platform for the compiler (Ex: x86 or x64)
 set TARGET_PLATFORM=x64
 
-echo build-windows.bat 0.0.5 Simple raylib VC project
+echo build-windows.bat 0.0.6 Simple raylib VC project
 
 REM About this build script: it does many things, but in essence, it's
 REM very simple. It has 3 compiler invocations: building raylib (which
@@ -99,19 +99,18 @@ REM Display what we're doing
 echo COMPILE-INFO: Compiling raylib project, flags: !COMPILATION_FLAGS! /link /LTCG
 
 REM Create the temp directory for raylib
-set "TEMP_DIR=tmp\
+set "TEMP_DIR=wrk
+
 
 IF DEFINED BUILD_ALL (
-  IF EXIST !TEMP_DIR!\ (
+  IF EXIST !TEMP_DIR!\core.obj (
     echo COMPILE-INFO: Found cached raylib files, rebuilding.
-    del /Q !TEMP_DIR!
-    rmdir !TEMP_DIR!
+    del !TEMP_DIR!\*.obj
   )
 )
 
 REM Build raylib if it hasn't been cached in TEMP_DIR
-IF NOT EXIST !TEMP_DIR!\ (
-  mkdir !TEMP_DIR!
+IF NOT EXIST !TEMP_DIR!\core.obj (
   cd !TEMP_DIR!
   REM Raylib's src folder
   set "RAYLIB_DEFINES=/D_DEFAULT_SOURCE /DPLATFORM_DESKTOP /DGRAPHICS_API_OPENGL_33"
@@ -153,6 +152,7 @@ cd !ROOT_DIR!
 
 IF NOT DEFINED QUIET echo COMPILE-INFO: All done.
 
+@REM 0.0.6 2021-09-29T22:35Z Change how wrk/ is cleaned
 @REM 0.0.5 2021-09-29T22:19Z Switch to wrk/ from temp variations
 @REM 0.0.4 2021-09-29T21:42Z Simplify confirmation of VC Tools
 @REM 0.0.3 2021-09-29T21:32Z Eliminate all but -v -c -r options
