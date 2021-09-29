@@ -1,4 +1,4 @@
-@REM build-windows.bat 0.0.6       UTF-8                          2021-09-29
+@REM build-windows.bat 0.0.7       UTF-8                          2021-09-29
 @REM ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 @echo off
 REM Change your executable name here
@@ -15,7 +15,7 @@ set RAYLIB_SRC=..\..\..\raylib\src
 REM Set the target platform for the compiler (Ex: x86 or x64)
 set TARGET_PLATFORM=x64
 
-echo build-windows.bat 0.0.6 Simple raylib VC project
+echo build-windows.bat 0.0.7 Simple raylib VC project
 
 REM About this build script: it does many things, but in essence, it's
 REM very simple. It has 3 compiler invocations: building raylib (which
@@ -86,7 +86,7 @@ set RAYLIB_SRC=!ROOT_DIR!\!RAYLIB_SRC!
 REM Flags
 set OUTPUT_FLAG=/Fe: "!GAME_NAME!"
 set COMPILATION_FLAGS=/O1 /GL
-set WARNING_FLAGS=
+set WARNING_FLAGS=/Wall
 set SUBSYSTEM_FLAGS=/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup
 set LINK_FLAGS=/link /LTCG kernel32.lib user32.lib shell32.lib winmm.lib gdi32.lib opengl32.lib
 set OUTPUT_DIR=app
@@ -152,6 +152,7 @@ cd !ROOT_DIR!
 
 IF NOT DEFINED QUIET echo COMPILE-INFO: All done.
 
+@RE< 0.0.7 2021-09-29T22:41Z Do Wall on the source (not raylib)
 @REM 0.0.6 2021-09-29T22:35Z Change how wrk/ is cleaned
 @REM 0.0.5 2021-09-29T22:19Z Switch to wrk/ from temp variations
 @REM 0.0.4 2021-09-29T21:42Z Simplify confirmation of VC Tools
