@@ -1,4 +1,4 @@
-rawCL.txt 0.0.4                     UTF-8                         2021-09-29
+rawVC.txt 0.0.5                     UTF-8                         2021-09-29
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -9,7 +9,7 @@ rawCL.txt 0.0.4                     UTF-8                         2021-09-29
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
-                      RAWCL BARE-BONES CL COMPILE SETUP
+                      RAWCL BARE-BONES VC COMPILE SETUP
                       ---------------------------------
 
     The raylib/projects/scripts/rawCL folder is for a tear-down of the raylib
@@ -21,7 +21,7 @@ rawCL.txt 0.0.4                     UTF-8                         2021-09-29
 
 MANIFEST
 
-    rawCL.txt
+    rawVC.txt
         this manifest and job-jar file
 
     core_basic_window.c
@@ -67,8 +67,8 @@ MANIFEST
 
  ATTRIBUTION
 
-   Hamilton, Dennis E. rawCL Bare-Bones CL Compile Setup.  rayLab project
-   text file rawCL.txt version 0.0.4 dated 2021-09-29, available on the
+   Hamilton, Dennis E. rawCL Bare-Bones VC Compile Setup.  rayLab project
+   text file rawVC.txt version 0.0.5 dated 2021-09-29, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/rawCL.txt>
 
@@ -83,7 +83,9 @@ TODO
   * Determine whether there is a way that inserting projects into a working
     copy of raylib or in a shadow structure can work the same regardless.
     This tends to mean that relative links into raylib for includes and
-    other artifacts will work properly.
+    other artifacts will work properly.  I think I have to Set an environment
+    variable to have that work.  Then I have to see if I can use environment
+    variables in *.opt files.  It is not promising.  Still, it should work.
 
   * We need to sneak up on this.  Start with simple cases and refine what
     works as we go.
@@ -107,23 +109,25 @@ TODO
     examples are clearly all raylib licensed.  If I contribute any new script,
     it will be under the raylib license and not have any others.  Watch it.
 
-  * The app folder needs to hold some things about what it is about.  Ditto
-    for the temp folder.  It might have its own clean script?
+  * The wrk/ folder might need its own clean script?
 
-  * I guess they are rayLab options command files.  Maybe that's not quite it,
-    or we can presume someone would know how to rename them for other cases.
+  * I guess theses are rayLab options command files.  Maybe that's not quite
+    it, or we can presume someone would know how to rename them for other
+    cases.
 
   * I am going to be righteous about not doing debugging builds.  There is
     only one build and it is the one that "ships."  So if there is logging and
     other provisions (e.g., symbols), they come along for the ride.  The idea
     is not to have such a crutch in early learning.  Confirmable experience
-    and the ability to analyze is what I want to cultivate.
+    and the ability to analyze is what I want to cultivate.  The /w option
+    is also a problem, although it might be necessary with regard to building
+    the raylib *.c files.  I am hating exposing beginners to this.
 
   * I want to keep the scripts and options at the level above app and tmp.
     I am beginning to think having them in wrk/ is appropriate when thinking
     about these being kits.
 
-  * Want all scripts and options to be at the rawCL level.  This may make for
+  * Want all scripts and options to be at the rawVC level.  This may make for
     some odd cases.
 
   * I think there might be another option file, and a couple of batch files.
@@ -150,6 +154,8 @@ TODO
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.5 2021-09-29T18:06Z Reset completed, now to confirm build-windows.bat
+       and see how to unravel it after renaming from rawCL to rawVC.
  0.0.4 2021-09-29T17:37Z RESET RESET attempting to get around build problems
  0.0.3 2021-09-28T15:00Z Renaming of tmp/ to wrk/, manage TODOs
  0.0.2 2021-09-27T18:50Z More TODOs, some tweaking

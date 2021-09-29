@@ -1,4 +1,4 @@
-scripts.txt 0.0.1                   UTF-8                         2021-09-25
+scripts.txt 0.0.2                   UTF-8                         2021-09-29
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -27,8 +27,8 @@ MANIFEST
     scripts.txt
         this manifest and job-jar file
 
-    rawCL/
-        establishment of a bare CL compilation with Command Prompt
+    rawVC/
+        establishment of a bare VC compilation with Command Prompt
         environment already established
 
 
@@ -53,7 +53,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. Experimental Raylib Script Cases.  rayLab project
-   text file scripts.txt version 0.0.1 dated 2021-09-25, available on the
+   text file scripts.txt version 0.0.2 dated 2021-09-29, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/scripts.txt>
 
@@ -88,6 +88,7 @@ TODO
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.2 2021-09-29T18:08Z Reflect change from rawCL/ to rawVC/
  0.0.1 2021-09-25T23:47Z Establish rawCL/ and manage TODOs
  0.0.0 2021-09-25T23:14Z placeholder for building down to scripts cases
 

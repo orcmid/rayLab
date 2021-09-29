@@ -1,33 +1,31 @@
-app.txt 0.0.1                       UTF-8                         2021-09-28
+app.txt 0.0.2                       UTF-8                         2021-09-29
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
                          ================================
 
 
-<https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/app/app.txt>
+<https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawVC/app.txt>
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
-                          RAWCL XCOPY APP FOLDER
+                          RAWvc XCOPY APP FOLDER
                           ----------------------
 
-    The raylib/projects/scripts/rawCL/app/ folder is a standard subfolder for
+    The raylib/projects/scripts/rawVC/app/ folder is a standard subfolder for
     a command-line build in the parent (e.g., rawCL) folder.  app/ contents
     consist of the compiled .exe and any companion files/folders that are
     required for usage of the executable program.
 
     Although the materials may be persistent, they are also excluded from any
     git repository, since they are not part of a contribution to any clone
-    in which app/ is part of a construction set such as rawCL.
+    in which app/ is part of a construction set such as rawVC.
 
     The folder is amenable to XCopy deployment, or potential use in creating
     an MSIX distributable.  The app/ folder should be amenable to Zipping up,
     possibly after renaming the app.exe, and removing some scaffolding
     files.  Addition of a README and other user-supporting materials would be
     handy.
-
-
 
 MANIFEST
 
@@ -56,10 +54,10 @@ MANIFEST
 
  ATTRIBUTION
 
-   Hamilton, Dennis E. rawCL XCopy App Folder.  rayLab project
-   text file tmp.txt version 0.0.1 dated 2021-09-27, available on the
+   Hamilton, Dennis E. rawVC XCopy App Folder.  rayLab project
+   text file app.txt version 0.0.2 dated 2021-09-29, available on the
    Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/app/app.txt>
+   <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawVC/app/app.txt>
 
 TODO
 
@@ -67,12 +65,13 @@ TODO
     folder.  Something like /Fe..\app\app.exe
 
   * Determine what the context of options and command line parameters is
-    (more under tmp.txt and also toolcraft)
+    (more under wrk.txt and also toolcraft)
 
   * Add a NOTICE.txt that acknowledges development and construction.
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.2 2021-09-29T18:17Z Reflect change from rawCL/ to rawVC/.
  0.0.1 2021-09-28T14:15Z touch-up, manage TODOs
  0.0.0 2021-09-27T23:42Z placeholder for native-build intermediate materials
 
