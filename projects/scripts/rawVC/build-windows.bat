@@ -1,4 +1,4 @@
-@REM build.windows.bat 0.0.3       UTF-8                          2021-09-29
+@REM build.windows.bat 0.0.4       UTF-8                          2021-09-29
 @REM ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 @echo off
 REM Change your executable name here
@@ -24,23 +24,11 @@ REM verbose, sorry.
 
 REM To skip to the actual building part of the script, search for ":BUILD"
 
-REM Checks if cl is available and skips to the argument loop if it is
-REM (Prevents calling vcvarsall every time you run this script)
+REM Check that cl is available
 WHERE cl >nul 2>nul
 IF %ERRORLEVEL% == 0 goto READ_ARGS
-REM Activate the msvc build environment if cl isn't available yet
-IF EXIST "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" (
-  set VC_INIT="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat"
-) ELSE IF EXIST "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" (
-  set VC_INIT="C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvarsall.bat"
-) ELSE IF EXIST "C:\Program Files (x86)\Microsoft Visual C++ Build Tools\vcbuildtools.bat" (
-  set VC_INIT="C:\Program Files (x86)\Microsoft Visual C++ Build Tools\vcbuildtools.bat"
-) ELSE (
-  REM Initialize your vc environment here if the defaults don't work
-  REM  set VC_INIT="C:\your\path\here\vcvarsall.bat"
-  REM And then remove/comment out the following two lines
-  echo "Couldn't find vcvarsall.bat or vcbuildtools.bat, please set it manually."
-  exit /B
+echo "Command-line environment is not set up.  Please do so."
+exit /B
 )
 echo Setting up the msvc build environment, this could take some time but the next builds should be faster
 REM Remove everything after %TARGET_PLATFORM% if you want to see
@@ -189,6 +177,7 @@ cd !ROOT_DIR!
 
 IF NOT DEFINED QUIET echo COMPILE-INFO: All done.
 
+@REM 0.0.4 2021-09-29T21:42Z Simplify confirmation of VC Tools
 @REM 0.0.3 2021-09-29T21:32Z Eliminate all but -v -c -r options
 @REM 0.0.2 2021-09-29T21:03Z Change output directory to app/
 @REM 0.0.1 2021-09-29T18:35Z Set parameters for compiling at rawVC/
