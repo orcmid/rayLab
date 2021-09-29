@@ -1,6 +1,8 @@
+@REM build.windows.bat 0.0.2       UTF-8                          2021-09-29
+@REM ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 @echo off
 REM Change your executable name here
-set GAME_NAME=game.exe
+set GAME_NAME=core_basic_window.exe
 
 REM Set your sources here (relative paths!)
 REM Example with two source folders:
@@ -8,10 +10,10 @@ REM set SOURCES=src\*.c src\submodule\*.c
 set SOURCES=core_basic_window.c
 
 REM Set your raylib\src location here (relative path!)
-set RAYLIB_SRC=..\..\src
+set RAYLIB_SRC=..\..\..\raylib\src
 
 REM Set the target platform for the compiler (Ex: x86 or x64)
-set TARGET_PLATFORM=x86
+set TARGET_PLATFORM=x64
 
 REM About this build script: it does many things, but in essence, it's
 REM very simple. It has 3 compiler invocations: building raylib (which
@@ -22,7 +24,7 @@ REM verbose, sorry.
 
 REM To skip to the actual building part of the script, search for ":BUILD"
 
-REM Checks if cl is available and skips to the argument loop if it is 
+REM Checks if cl is available and skips to the argument loop if it is
 REM (Prevents calling vcvarsall every time you run this script)
 WHERE cl >nul 2>nul
 IF %ERRORLEVEL% == 0 goto READ_ARGS
@@ -116,9 +118,9 @@ exit /B
 
 :BUILD
 REM Directories
-set "ROOT_DIR=%CD%"
-set "SOURCES=!ROOT_DIR!\!SOURCES!"
-set "RAYLIB_SRC=!ROOT_DIR!\!RAYLIB_SRC!"
+set ROOT_DIR=%CD%
+set SOURCES=!ROOT_DIR!\!SOURCES!
+set RAYLIB_SRC=!ROOT_DIR!\!RAYLIB_SRC!
 
 REM Flags
 set OUTPUT_FLAG=/Fe: "!GAME_NAME!"
@@ -126,7 +128,7 @@ set COMPILATION_FLAGS=/O1 /GL
 set WARNING_FLAGS=
 set SUBSYSTEM_FLAGS=/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup
 set LINK_FLAGS=/link /LTCG kernel32.lib user32.lib shell32.lib winmm.lib gdi32.lib opengl32.lib
-set OUTPUT_DIR=builds\windows-msvc
+set OUTPUT_DIR=app
 REM Debug changes to flags
 IF DEFINED BUILD_DEBUG (
   set OUTPUT_FLAG=/Fe: "!GAME_NAME!"
@@ -134,7 +136,7 @@ IF DEFINED BUILD_DEBUG (
   set WARNING_FLAGS=/Wall
   set SUBSYSTEM_FLAGS=/DEBUG
   set LINK_FLAGS=/link kernel32.lib user32.lib shell32.lib winmm.lib gdi32.lib opengl32.lib
-  set OUTPUT_DIR=builds-debug\windows-msvc
+  set OUTPUT_DIR=app
 )
 IF NOT DEFINED VERBOSE (
   set VERBOSITY_FLAG=/nologo
@@ -217,3 +219,7 @@ REM Back to development directory
 cd !ROOT_DIR!
 
 IF NOT DEFINED QUIET echo COMPILE-INFO: All done.
+
+@REM 0.0.2 2021-09-29T21:03Z Change output directory to app/
+@REM 0.0.1 2021-09-29T18:35Z Set parameters for compiling at rawVC/
+@REM 0.0.0 2021-09-29T18:27Z Cloned from raylib scripts/ folder.
