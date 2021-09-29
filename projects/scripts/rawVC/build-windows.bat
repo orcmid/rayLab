@@ -1,4 +1,4 @@
-@REM build.windows.bat 0.0.2       UTF-8                          2021-09-29
+@REM build.windows.bat 0.0.3       UTF-8                          2021-09-29
 @REM ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 @echo off
 REM Change your executable name here
@@ -59,27 +59,11 @@ if "!ARG!" == "" ( goto BUILD )
 IF NOT "x!ARG!" == "x!ARG:h=!" (
   goto HELP
 )
-IF NOT "x!ARG!" == "x!ARG:d=!" (
-  set BUILD_DEBUG=1
-)
-IF NOT "x!ARG!" == "x!ARG:u=!" (
-  set UPX_IT=1
-)
 IF NOT "x!ARG!" == "x!ARG:r=!" (
   set RUN_AFTER_BUILD=1
 )
 IF NOT "x!ARG!" == "x!ARG:c=!" (
   set BUILD_ALL=1
-)
-IF NOT "x!ARG!" == "x!ARG:qq=!" (
-  set QUIET=1
-  set REALLY_QUIET=1
-) ELSE IF NOT "x!ARG!" == "x!ARG:q=!" (
-  IF DEFINED QUIET (
-    set REALLY_QUIET=1
-  ) ELSE (
-    set QUIET=1
-  )
 )
 IF NOT "x!ARG!" == "x!ARG:v=!" (
   set VERBOSE=1
@@ -93,26 +77,17 @@ IF NOT "%1" == "" (
 :HELP
 echo Usage: build-windows.bat [-hdurcqqv]
 echo  -h  Show this information
-echo  -d  Faster builds that have debug symbols, and enable warnings
-echo  -u  Run upx* on the executable after compilation (before -r)
 echo  -r  Run the executable after compilation
 echo  -c  Remove the temp\{debug,release} directory, ie. full recompile
-echo  -q  Suppress this script's informational prints
-echo  -qq Suppress all prints, complete silence
 echo  -v  cl.exe normally prints out a lot of superficial information, as
 echo      well as the MSVC build environment activation scripts, but these are
 echo      mostly suppressed by default. If you do want to see everything, use
 echo      this flag.
 echo.
-echo * This is mostly here to make building simple "shipping" versions
-echo   easier, and it's a very small bit in the build scripts. The option
-echo   requires that you have upx installed and on your path, of course.
-echo.
 echo Examples:
 echo  Build a release build:                    build-windows.bat
 echo  Build a release build, full recompile:    build-windows.bat -c
-echo  Build a debug build and run:              build-windows.bat -d -r
-echo  Build in debug, run, don't print at all:  build-windows.bat -drqq
+echo  Build a fresh verbose build and run:      build-windows.bat -c -v -r
 exit /B
 
 
@@ -199,12 +174,6 @@ IF DEFINED REALLY_QUIET (
 del *.obj
 IF NOT DEFINED QUIET echo COMPILE-INFO: Game compiled into an executable in: !OUTPUT_DIR!\
 
-REM Run upx
-IF DEFINED UPX_IT (
-  IF NOT DEFINED QUIET echo COMPILE-INFO: Packing !GAME_NAME! with upx.
-  upx !GAME_NAME! > NUL 2>&1
-)
-
 REM Finally, run the produced executable
 IF DEFINED RUN_AFTER_BUILD (
   IF NOT DEFINED QUIET echo COMPILE-INFO: Running.
@@ -220,6 +189,7 @@ cd !ROOT_DIR!
 
 IF NOT DEFINED QUIET echo COMPILE-INFO: All done.
 
+@REM 0.0.3 2021-09-29T21:32Z Eliminate all but -v -c -r options
 @REM 0.0.2 2021-09-29T21:03Z Change output directory to app/
 @REM 0.0.1 2021-09-29T18:35Z Set parameters for compiling at rawVC/
 @REM 0.0.0 2021-09-29T18:27Z Cloned from raylib scripts/ folder.
