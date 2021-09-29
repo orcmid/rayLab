@@ -1,4 +1,4 @@
-@REM build.windows.bat 0.0.4       UTF-8                          2021-09-29
+@REM build-windows.bat 0.0.5       UTF-8                          2021-09-29
 @REM ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 @echo off
 REM Change your executable name here
@@ -15,6 +15,8 @@ set RAYLIB_SRC=..\..\..\raylib\src
 REM Set the target platform for the compiler (Ex: x86 or x64)
 set TARGET_PLATFORM=x64
 
+echo build-windows.bat 0.0.5 Simple raylib VC project
+
 REM About this build script: it does many things, but in essence, it's
 REM very simple. It has 3 compiler invocations: building raylib (which
 REM is not done always, see logic by searching "Build raylib"), building
@@ -30,10 +32,6 @@ IF %ERRORLEVEL% == 0 goto READ_ARGS
 echo "Command-line environment is not set up.  Please do so."
 exit /B
 )
-echo Setting up the msvc build environment, this could take some time but the next builds should be faster
-REM Remove everything after %TARGET_PLATFORM% if you want to see
-REM the vcvarsall.bat or vcbuildtools.bat output
-call %VC_INIT% %TARGET_PLATFORM% > NUL 2>&1
 
 :READ_ARGS
 REM For the ! variable notation
@@ -63,7 +61,7 @@ IF NOT "%1" == "" (
 
 
 :HELP
-echo Usage: build-windows.bat [-hdurcqqv]
+echo Usage: build-windows.bat [-hrcv]
 echo  -h  Show this information
 echo  -r  Run the executable after compilation
 echo  -c  Remove the temp\{debug,release} directory, ie. full recompile
@@ -92,35 +90,20 @@ set WARNING_FLAGS=
 set SUBSYSTEM_FLAGS=/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup
 set LINK_FLAGS=/link /LTCG kernel32.lib user32.lib shell32.lib winmm.lib gdi32.lib opengl32.lib
 set OUTPUT_DIR=app
-REM Debug changes to flags
-IF DEFINED BUILD_DEBUG (
-  set OUTPUT_FLAG=/Fe: "!GAME_NAME!"
-  set COMPILATION_FLAGS=/Od /Zi
-  set WARNING_FLAGS=/Wall
-  set SUBSYSTEM_FLAGS=/DEBUG
-  set LINK_FLAGS=/link kernel32.lib user32.lib shell32.lib winmm.lib gdi32.lib opengl32.lib
-  set OUTPUT_DIR=app
-)
+
 IF NOT DEFINED VERBOSE (
   set VERBOSITY_FLAG=/nologo
 )
 
 REM Display what we're doing
-IF DEFINED BUILD_DEBUG (
-  IF NOT DEFINED QUIET echo COMPILE-INFO: Compiling in debug mode, flags: !COMPILATION_FLAGS! !WARNING_FLAGS!
-) ELSE (
-  IF NOT DEFINED QUIET echo COMPILE-INFO: Compiling in release mode, flags: !COMPILATION_FLAGS! /link /LTCG
-)
+echo COMPILE-INFO: Compiling raylib project, flags: !COMPILATION_FLAGS! /link /LTCG
 
 REM Create the temp directory for raylib
-set "TEMP_DIR=temp\release"
-IF DEFINED BUILD_DEBUG (
-  set "TEMP_DIR=temp\debug"
-)
+set "TEMP_DIR=tmp\
 
 IF DEFINED BUILD_ALL (
   IF EXIST !TEMP_DIR!\ (
-    IF NOT DEFINED QUIET echo COMPILE-INFO: Found cached raylib, rebuilding.
+    echo COMPILE-INFO: Found cached raylib files, rebuilding.
     del /Q !TEMP_DIR!
     rmdir !TEMP_DIR!
   )
@@ -135,12 +118,9 @@ IF NOT EXIST !TEMP_DIR!\ (
   set RAYLIB_C_FILES="!RAYLIB_SRC!\core.c" "!RAYLIB_SRC!\shapes.c" "!RAYLIB_SRC!\textures.c" "!RAYLIB_SRC!\text.c" "!RAYLIB_SRC!\models.c" "!RAYLIB_SRC!\utils.c" "!RAYLIB_SRC!\raudio.c" "!RAYLIB_SRC!\rglfw.c"
   set RAYLIB_INCLUDE_FLAGS=/I"!RAYLIB_SRC!" /I"!RAYLIB_SRC!\external\glfw\include"
 
-  IF DEFINED REALLY_QUIET (
-    cl.exe /w /c !RAYLIB_DEFINES! !RAYLIB_INCLUDE_FLAGS! !COMPILATION_FLAGS! !RAYLIB_C_FILES! > NUL 2>&1 || exit /B
-  ) ELSE (
-    cl.exe /w /c !VERBOSITY_FLAG! !RAYLIB_DEFINES! !RAYLIB_INCLUDE_FLAGS! !COMPILATION_FLAGS! !RAYLIB_C_FILES! || exit /B
-  )
-  IF NOT DEFINED QUIET echo COMPILE-INFO: Raylib compiled into object files in: !TEMP_DIR!\
+  cl.exe /w /c !VERBOSITY_FLAG! !RAYLIB_DEFINES! !RAYLIB_INCLUDE_FLAGS! !COMPILATION_FLAGS! !RAYLIB_C_FILES! || exit /B
+
+  echo COMPILE-INFO: Raylib compiled into object files in: !TEMP_DIR!\
 
   REM Out of the temp directory
   cd !ROOT_DIR!
@@ -151,13 +131,9 @@ IF NOT EXIST !OUTPUT_DIR! mkdir !OUTPUT_DIR!
 cd !OUTPUT_DIR!
 
 REM Build the actual game
-IF NOT DEFINED QUIET echo COMPILE-INFO: Compiling game code.
-IF DEFINED REALLY_QUIET (
-  cl.exe !VERBOSITY_FLAG! !COMPILATION_FLAGS! !WARNING_FLAGS! /c /I"!RAYLIB_SRC!" !SOURCES! > NUL 2>&1 || exit /B
-  cl.exe !VERBOSITY_FLAG! !OUTPUT_FLAG! "!ROOT_DIR!\!TEMP_DIR!\*.obj" *.obj !LINK_FLAGS! !SUBSYSTEM_FLAGS! > NUL 2>&1 || exit /B
-) ELSE (
-  cl.exe !VERBOSITY_FLAG! !COMPILATION_FLAGS! !WARNING_FLAGS! /c /I"!RAYLIB_SRC!" !SOURCES! || exit /B
-  cl.exe !VERBOSITY_FLAG! !OUTPUT_FLAG! "!ROOT_DIR!\!TEMP_DIR!\*.obj" *.obj !LINK_FLAGS! !SUBSYSTEM_FLAGS! || exit /B
+echo COMPILE-INFO: Compiling game code.
+cl.exe !VERBOSITY_FLAG! !COMPILATION_FLAGS! !WARNING_FLAGS! /c /I"!RAYLIB_SRC!" !SOURCES! || exit /B
+cl.exe !VERBOSITY_FLAG! !OUTPUT_FLAG! "!ROOT_DIR!\!TEMP_DIR!\*.obj" *.obj !LINK_FLAGS! !SUBSYSTEM_FLAGS! || exit /B
 )
 del *.obj
 IF NOT DEFINED QUIET echo COMPILE-INFO: Game compiled into an executable in: !OUTPUT_DIR!\
@@ -177,6 +153,7 @@ cd !ROOT_DIR!
 
 IF NOT DEFINED QUIET echo COMPILE-INFO: All done.
 
+@REM 0.0.5 2021-09-29T22:19Z Switch to wrk/ from temp variations
 @REM 0.0.4 2021-09-29T21:42Z Simplify confirmation of VC Tools
 @REM 0.0.3 2021-09-29T21:32Z Eliminate all but -v -c -r options
 @REM 0.0.2 2021-09-29T21:03Z Change output directory to app/
