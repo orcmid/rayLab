@@ -1,4 +1,4 @@
-rawCL.txt 0.0.3                     UTF-8                         2021-09-28
+rawCL.txt 0.0.4                     UTF-8                         2021-09-29
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -29,6 +29,10 @@ MANIFEST
 
     build-windows.bat
         the raylib file that will be torn down and maybe built back up
+
+    rayLabRaylib.opt
+        The options, search pathes, and code locations employed in making
+        the raylib application.
 
     rayLabBuild.opt
         CL customizable command options file for the rayLab Build
@@ -64,7 +68,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rawCL Bare-Bones CL Compile Setup.  rayLab project
-   text file rawCL.txt version 0.0.3 dated 2021-09-28, available on the
+   text file rawCL.txt version 0.0.4 dated 2021-09-29, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/rawCL.txt>
 
@@ -124,8 +128,29 @@ TODO
 
   * I think there might be another option file, and a couple of batch files.
 
+  * DANGER, DANGER.  I am distressed by the use of /w to supporess all
+    warning messages.  I will use /D_CRT_SECURE_NO_WARNINGS also.  There are
+    an incredible number of warnings, both about string functions but also
+    about width-shortening casts/assignments.  I reall don't want to expose
+    beginners to this, and I must find a way around it that doesn't involve
+    having to patch all of those errors in respect to raylib sources.  It may
+    be that I should suppress some specific warnings.
+
+  * DANGER, DANGER.  raylib uses some initializers that are not C99
+    compatible.  I'm not certain how those cases slip through.  /std:c17 gets
+    past them.  I will see if /std:c11 also works.
+
+  * DANGER, DANGER.  I get the builds to work but I get linker errors and
+    no .exe is produced.  I need to go back to the original build-windows.bat
+    and see how that works out.
+
+  * Once build-windows.bat works, start taking things apart to get a
+    repeatable case with a simpler set of operations.  I might need some
+    *.opt variations too.
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.4 2021-09-29T17:37Z RESET RESET attempting to get around build problems
  0.0.3 2021-09-28T15:00Z Renaming of tmp/ to wrk/, manage TODOs
  0.0.2 2021-09-27T18:50Z More TODOs, some tweaking
  0.0.1 2021-09-27T16:40Z Manage TODOs, think outloud about organization
