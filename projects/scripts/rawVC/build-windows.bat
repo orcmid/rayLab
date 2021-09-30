@@ -1,4 +1,4 @@
-@REM build-windows.bat 0.0.8       UTF-8                          2021-09-30
+@REM build-windows.bat 0.0.9       UTF-8                          2021-09-30
 @REM ----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 @echo off
 REM Change your executable name here
@@ -15,7 +15,7 @@ set RAYLIB_SRC=..\..\..\raylib\src
 REM Set the target platform for the compiler (Ex: x86 or x64)
 set TARGET_PLATFORM=x64
 
-echo build-windows.bat 0.0.8 Simple raylib VC project
+echo build-windows.bat 0.0.9 Simple raylib VC project
 
 REM About this build script: it does many things, but in essence, it's
 REM very simple. It has 3 compiler invocations: building raylib (which
@@ -85,10 +85,10 @@ set RAYLIB_SRC=!ROOT_DIR!\!RAYLIB_SRC!
 
 REM Flags
 set OUTPUT_FLAG=/Fe: "!GAME_NAME!"
-set COMPILATION_FLAGS=/std:c11 /O2 /favor:blend /utf-8 /validate-charset /EHsc
-set WARNING_FLAGS=/Wall /sdl
+set COMPILATION_FLAGS=/std:c11 /O1 /GL /favor:blend /utf-8 /validate-charset /EHsc
+set WARNING_FLAGS=/W3 /sdl
 set SUBSYSTEM_FLAGS=/SUBSYSTEM:WINDOWS /ENTRY:mainCRTStartup
-set LINK_FLAGS=/link kernel32.lib user32.lib shell32.lib winmm.lib gdi32.lib opengl32.lib
+set LINK_FLAGS=/link /LTCG kernel32.lib user32.lib shell32.lib winmm.lib gdi32.lib opengl32.lib
 REM /LTCG deleted
 set OUTPUT_DIR=app
 
@@ -150,6 +150,7 @@ cd !ROOT_DIR!
 
 echo COMPILE-INFO: All done.
 
+@REM 0.0.9 2021-09-30T18:08Z Fix warnings and resume /link code generation
 @REM 0.0.8 2021-09-30T00:30Z Get Stable build/rebuild working
 @REM 0.0.7 2021-09-29T22:41Z Do Wall on the source (not raylib)
 @REM 0.0.6 2021-09-29T22:35Z Change how wrk/ is cleaned

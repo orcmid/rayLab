@@ -21,11 +21,6 @@
 *
 *****************************************************************************/
 
-#pragma warning (disable:4820)
-    // https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-level-4-c4820
-    // as long as the raylib files are compiled to have the same paddings
-    // there's no action required about these warnings concerning raylib.h
-
 #include <raylib.h>
 
 int main(void)
