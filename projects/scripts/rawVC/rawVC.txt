@@ -1,4 +1,4 @@
-rawVC.txt 0.0.6                     UTF-8                         2021-09-30
+rawVC.txt 0.0.7                     UTF-8                         2021-10-01
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -18,6 +18,10 @@ rawVC.txt 0.0.6                     UTF-8                         2021-09-30
 
     Operation is confirmed and the skeletal arrangement is employed with
     some simple example cases.
+
+    The goal is to boil this down to one using *.opt options and easily used
+    on any simple raylib-using project, with minimal adjustments and using
+    the .zip extract technique for staging customizable working materials.
 
 MANIFEST
 
@@ -68,24 +72,14 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rawCL Bare-Bones VC Compile Setup.  rayLab project
-   text file rawVC.txt version 0.0.6 dated 2021-09-30, available on the
+   text file rawVC.txt version 0.0.7 dated 2021-10-01, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/rawCL.txt>
 
 TODO
 
-  * Replicate the build-windows.bat case that worked already and that
-    shows the different *.obs produced as fixed static components.
-
   * Figure out how to build and exercise the raylib examples using a couple
     of WinCon-like build setups.
-
-  * Determine whether there is a way that inserting projects into a working
-    copy of raylib or in a shadow structure can work the same regardless.
-    This tends to mean that relative links into raylib for includes and
-    other artifacts will work properly.  I think I have to Set an environment
-    variable to have that work.  Then I have to see if I can use environment
-    variables in *.opt files.  It is not promising.  Still, it should work.
 
   * We need to sneak up on this.  Start with simple cases and refine what
     works as we go.
@@ -95,7 +89,7 @@ TODO
     ones used should be customizable outside of a clone though.  Think more.
 
   * Initially, just build everything, needed or not.  This will be find for
-    compiling examples.
+    compiling examples.  The use of a clean option is valuable.
 
   * The resources folder needs to be in the app folder. That might be sketchy.
 
@@ -124,28 +118,21 @@ TODO
     about these being kits.
 
   * Want all scripts and options to be at the rawVC level.  This may make for
-    some odd cases.
+    some odd cases.  These need to be in a .gitignore location after an unzip,
+    so customizations do not impact any clone upstream.
 
   * I think there might be another option file, and a couple of batch files.
 
-  * DANGER, DANGER.  I am distressed by the use of /w to supporess all
-    warning messages.  I will use /D_CRT_SECURE_NO_WARNINGS also.  There are
-    an incredible number of warnings, both about string functions but also
-    about width-shortening casts/assignments.  I reall don't want to expose
-    beginners to this, and I must find a way around it that doesn't involve
-    having to patch all of those errors in respect to raylib sources.  It may
-    be that I should suppress some specific warnings.
+  * I have surrendered to the need to compile the raylib files with /w.  For
+    the specific files, /w3 and /sdl are used to get non-trivial warnings.
 
-  * DANGER, DANGER.  raylib uses some initializers that are not C99
-    compatible.  I'm not certain how those cases slip through.  /std:c11 gets
-    past them.
-
-  * Now that build-windows.bat works and is boiled down to essentials,
+   * Now that build-windows.bat works and is boiled down to essentials,
     start taking things apart to get a repeatable case with a simpler set
     of operations using @*.opt files.
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.7 2021-10-01T23:15Z Manage TODOs, consider next steps
  0.0.6 2021-09-30T02:03Z Update to reflect a working build-windows.bat
  0.0.5 2021-09-29T18:06Z Reset completed, now to confirm build-windows.bat
        and see how to unravel it after renaming from rawCL to rawVC.
