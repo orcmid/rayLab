@@ -1,4 +1,4 @@
-rawVC.txt 0.0.7                     UTF-8                         2021-10-01
+rawVC.txt 0.0.8                    UTF-8                         2021-10-02
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -22,6 +22,10 @@ rawVC.txt 0.0.7                     UTF-8                         2021-10-01
     The goal is to boil this down to one using *.opt options and easily used
     on any simple raylib-using project, with minimal adjustments and using
     the .zip extract technique for staging customizable working materials.
+
+    The result will probably be rayVC and will assume that there is better
+    proximity between the user src/, the wrk/ and app/ folders, after an
+    unZip at a raylib-adjacent folder.
 
 MANIFEST
 
@@ -72,7 +76,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rawCL Bare-Bones VC Compile Setup.  rayLab project
-   text file rawVC.txt version 0.0.7 dated 2021-10-01, available on the
+   text file rawVC.txt version 0.0.8 dated 2021-10-02, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawCL/rawCL.txt>
 
@@ -101,7 +105,7 @@ TODO
 
   * The wrk/ folder might need its own clean script?
 
-  * I guess theses are rayLab options command files.  Maybe that's not quite
+  * I guess these are rayLab options command files.  Maybe that's not quite
     it, or we can presume someone would know how to rename them for other
     cases.
 
@@ -117,21 +121,27 @@ TODO
     I am beginning to think having them in wrk/ is appropriate when thinking
     about these being kits.
 
-  * Want all scripts and options to be at the rawVC level.  This may make for
-    some odd cases.  These need to be in a .gitignore location after an unzip,
-    so customizations do not impact any clone upstream.
-
   * I think there might be another option file, and a couple of batch files.
 
   * I have surrendered to the need to compile the raylib files with /w.  For
     the specific files, /w3 and /sdl are used to get non-trivial warnings.
 
-   * Now that build-windows.bat works and is boiled down to essentials,
+  * Now that build-windows.bat works and is boiled down to essentials,
     start taking things apart to get a repeatable case with a simpler set
     of operations using @*.opt files.
 
+  * Start assuming a src/ folder and compile everything in it.  This will
+    need to be covered by an /I inclusion too.
+
+  * Start putting the source .objs in the wrk/ folder too.  This should be
+    independent of naming the app.
+
+  * Confirm that environment variables in *.opt files are not expanded and
+    figure out a work-around.
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.8 2021-10-02T17:26Z Expand TODOs
  0.0.7 2021-10-01T23:15Z Manage TODOs, consider next steps
  0.0.6 2021-09-30T02:03Z Update to reflect a working build-windows.bat
  0.0.5 2021-09-29T18:06Z Reset completed, now to confirm build-windows.bat
