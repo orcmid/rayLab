@@ -1,10 +1,10 @@
-experiments.txt 0.0.3                UTF-8                      dh:2021-08-30
+experiments.txt 0.0.4                UTF-8                      dh:2021-10-26
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                      rayLab: Native Windows raylib Laboratory
                      ========================================
 
-<https://github.com/orcmid/rayLab/blob/master/docs/experiments/experiments.txt>
+<https://github.com/orcmid/rayLab/blob/main/docs/experiments/experiments.txt>
         <https://orcmid.github.io/rayLab/experiments/experiments.txt>
 
                            RAYLAB LABORATORY NOTEBOOK
@@ -44,9 +44,9 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. RayLab Laboratory Notebook.  rayLab project
-   text file experiments.txt version 0.0.0 dated 2021-08-22, available on the
+   text file experiments.txt version 0.0.4 dated 2021-10-26, available on the
    Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/docs/experiments/experiments.txt>
+   <https://orcmid.github.io/rayLab/experiments/experiments.txt>
 
 TODO
 
@@ -58,6 +58,7 @@ TODO
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.4 2021-10-26T01:43Z Change "master" to "main"
  0.0.3 2021-08-30T19:54Z add rulers
  0.0.2 2021-08-27T00:36Z Anticipate introduction of X210802.
  0.0.1 2021-08-23T20:18Z Syncrhonize to reflect added content, manage TODOs

@@ -1,10 +1,10 @@
-X210801.txt 0.0.6                   UTF-8                       dh:2021-08-30
+X210801.txt 0.0.7                   UTF-8                       dh:2021-10-26
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                  rayLab: Native Windows raylib Laboratory
                  ========================================
 
-<https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210801/X210801.txt>
+<https://github.com/orcmid/rayLab/blob/main/docs/experiments/X210801/X210801.txt>
         <https://orcmid.github.io/rayLab/experiments/X210801/X210801.txt>
 
                 X210801: SCREEN CAPTURE QUALITY DEGRADATION
@@ -45,14 +45,14 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. X210801: Screen Capture Quality Degradation. rayLab
-   experiments notebook file X210801.txt version 0.0.5 dated 2021-08-27,
+   experiments notebook file X210801.txt version 0.0.7 dated 2021-10-26,
    available on the Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210801/X210801.txt>
-
+   <https://orcmid.github.io/rayLab/experiments/X210801/X210801.txt>
 
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.7 2021-10=26T01:42Z Change "master" to "main"
  0.0.6 2021-08-30T19:58Z add rulers
  0.0.5 2021-08-27T00:39Z Correct the orcmid.github.io link
  0.0.4 2021-08-23T22:45Z "Never mind" - Emily Litella

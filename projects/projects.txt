@@ -1,11 +1,11 @@
-projects.txt 0.0.1                  UTF-8                         2021-09-25
+projects.txt 0.0.2                  UTF-8                         2021-10-26
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
                          ================================
 
 
-      <https://github.com/orcmid/rayLab/blob/master/projects/projects.txt>
+      <https://github.com/orcmid/rayLab/blob/main/projects/projects.txt>
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
@@ -51,9 +51,9 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. Shadowed raylib Projects Folder.  rayLab project
-   text file projects.txt version 0.0.1 dated 2021-09-25, available on the
+   text file projects.txt version 0.0.2 dated 2021-10-26, available on the
    Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/projects/projeccts.txt>
+   <https://github.com/orcmid/rayLab/blob/main/projects/projeccts.txt>
 
 TODO
 
@@ -83,6 +83,7 @@ TODO
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.2 2021-10-26T00:35Z Replace master with main in all URLs into the repo
  0.0.1 2021-09-25T23:17Z introduce scripts/, manage TODOs
  0.0.0 2021-09-25T22:55Z placeholder for building down to scripts and/or other
        levels of VC building cases.

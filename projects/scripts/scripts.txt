@@ -1,11 +1,11 @@
-scripts.txt 0.0.2                   UTF-8                         2021-09-29
+scripts.txt 0.0.3                   UTF-8                         2021-10-26
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
                          ================================
 
 
-      <https://github.com/orcmid/rayLab/blob/master/projects/projects.txt>
+      <https://github.com/orcmid/rayLab/blob/main/projects/projects.txt>
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
@@ -53,9 +53,9 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. Experimental Raylib Script Cases.  rayLab project
-   text file scripts.txt version 0.0.2 dated 2021-09-29, available on the
+   text file scripts.txt version 0.0.3 dated 2021-10-26, available on the
    Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/projects/scripts/scripts.txt>
+   <https://github.com/orcmid/rayLab/blob/main/projects/scripts/scripts.txt>
 
 TODO
 
@@ -88,6 +88,7 @@ TODO
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.3 2021-10-26T00:34Z Replace repo master references to main references
  0.0.2 2021-09-29T18:08Z Reflect change from rawCL/ to rawVC/
  0.0.1 2021-09-25T23:47Z Establish rawCL/ and manage TODOs
  0.0.0 2021-09-25T23:14Z placeholder for building down to scripts cases

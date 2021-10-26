@@ -1,10 +1,10 @@
-X210802.txt 0.0.5                   UTF-8                      dh:2021-08-31
+X210802.txt 0.0.6                   UTF-8                      dh:2021-10-26
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                  rayLab: Native Windows raylib Laboratory
                  ========================================
 
-<https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210802/X210802.txt>
+<https://github.com/orcmid/rayLab/blob/main/docs/experiments/X210802/X210802.txt>
       <https://orcmid.github.io/rayLab/experiments/X210802/X210802.txt>
 
             X210802: INSTALLING RAYLIB INSIDE WINDOWS PROJECTS
@@ -56,9 +56,9 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. X210802: Installing raylib Inside Windows Projects.
-   rayLab experiments notebook file X210802.txt version 0.0.4 dated
+   rayLab experiments notebook file X210802.txt version 0.0.5 dated
    2021-08-27, available on the Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/docs/experiments/X210802/X210802.txt>
+   <https://orcmid.github.io/rayLab/experiments/X210802/X210802.txt>
 
 TODOS
 
@@ -95,6 +95,7 @@ TODOS
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.6 2021-10-26T01:40Z Change "master" to "main"
  0.0.5 2021-08-31T20:09Z Manage TODOs, look at using permalinks as anchor
        references within in posted pages
  0.0.4 2021-08-30T20:01Z add rulers

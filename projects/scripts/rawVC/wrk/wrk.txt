@@ -1,11 +1,11 @@
-wrk.txt 0.0.3                       UTF-8                         2021-09-29
+wrk.txt 0.0.4                       UTF-8                         2021-10-26
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
                          ================================
 
 
-<https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawVC/tmp/tmp.txt>
+<https://github.com/orcmid/rayLab/blob/main/projects/scripts/rawVC/tmp/tmp.txt>
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
@@ -52,9 +52,9 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rawCL Bare-Bones tmp Folder.  rayLab project
-   text file tmp.txt version 0.0.3 dated 2021-09-29, available on the
+   text file tmp.txt version 0.0.4 dated 2021-10-26, available on the
    Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/master/projects/scripts/rawVC/wrk/wrk.txt>
+   <https://github.com/orcmid/rayLab/blob/main/projects/scripts/rawVC/wrk/wrk.txt>
 
 TODO
 
@@ -75,10 +75,11 @@ TODO
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.4 2021-10-26T00:43Z Replace "master" with "main"
  0.0.3 2021-09-29T18:13Z Reflect rawVC/ change amid still over-thinking
  0.0.2 2021-09-28T15:07Z Rename from tmp.txt to wrk.txt and over-thinking
  0.0.1 2021-09-28T14:28Z Noodling in TODOs
  0.0.0 2021-09-27T23:13Z placeholder for native-build intermediate materials
 
 
-                          ***** end of tmp.txt *****
+                          ***** end of wrk.txt *****
