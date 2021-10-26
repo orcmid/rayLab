@@ -1,4 +1,4 @@
-rawVC.txt 0.0.9                     UTF-8                         2021-10-26
+rawVC.txt 0.0.10                     UTF-8                         2021-10-26
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -9,7 +9,7 @@ rawVC.txt 0.0.9                     UTF-8                         2021-10-26
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
-                      RAWCL BARE-BONES VC COMPILE SETUP
+                      RAWVC BARE-BONES VC COMPILE SETUP
                       ---------------------------------
 
     The raylib/projects/scripts/rawVC folder is for a tear-down of the raylib
@@ -48,8 +48,9 @@ MANIFEST
     rayLabSources.opt
         CL customizable command options for the files to be built/included
 
-    wrk/
-        customizable folder for intermediate materials, parameters, etc.
+    cache/
+        customizable folder for intermediate materials that can be reused
+        from build to build when there is no change to dependency on them
 
     app/
         folder for the compiled .exe and also any resources that are
@@ -75,8 +76,8 @@ MANIFEST
 
  ATTRIBUTION
 
-   Hamilton, Dennis E. rawCL Bare-Bones VC Compile Setup.  rayLab project
-   text file rawVC.txt version 0.0.9 dated 2021-10-26, available on the
+   Hamilton, Dennis E. rawVC Bare-Bones VC Compile Setup.  rayLab project
+   text file rawVC.txt version 0.0.10 dated 2021-10-26, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/main/projects/scripts/rawVC/rawVC.txt>
 
@@ -103,7 +104,7 @@ TODO
     examples are clearly all raylib licensed.  If I contribute any new script,
     it will be under the raylib license and not have any others.  Watch it.
 
-  * The wrk/ folder might need its own clean script?
+  * The cache/ folder might need its own clean script?
 
   * I guess these are rayLab options command files.  Maybe that's not quite
     it, or we can presume someone would know how to rename them for other
@@ -117,9 +118,10 @@ TODO
     is also a problem, although it might be necessary with regard to building
     the raylib *.c files.  I am hating exposing beginners to this.
 
-  * I want to keep the scripts and options at the level above app and tmp.
-    I am beginning to think having them in wrk/ is appropriate when thinking
-    about these being kits.
+  * I want to keep the scripts and options at the level above app and cache.
+    I am beginning to think having them in cache/ is appropriate when thinking
+    about these being kits. [2021-10-26 I think that's not where options go,
+    options need to be at the level above in the current scheme.]
 
   * I think there might be another option file, and a couple of batch files.
 
@@ -133,19 +135,18 @@ TODO
   * Start assuming a src/ folder and compile everything in it.  This will
     need to be covered by an /I inclusion too.
 
-  * Start putting the source .objs in the wrk/ folder too.  This should be
-    independent of naming the app.
+  * Start putting the source .objs in the cache/ folder too.  This should be
+    independent of naming the app.  [2021-10-16 so some things have very
+    short cache lifetimes]
 
   * Confirm that environment variables in *.opt files are not expanded and
     figure out a work-around.
 
   * This should be rayVC when stabilized.
 
-  * The wrk/ folder should be changed to cache/ (and see how well renaming
-    works in Git or not).
-
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.10 2021-10-26T02:04Z Rename wrk/ to cache/
  0.0.9 2021-10-26T00:40Z Touch up and change "master" to "main"
  0.0.8 2021-10-02T17:26Z Expand TODOs
  0.0.7 2021-10-01T23:15Z Manage TODOs, consider next steps
