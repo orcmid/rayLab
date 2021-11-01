@@ -1,16 +1,16 @@
-rayLab.txt 0.0.10                   UTF-8                         2021-10-26
+rayLab.txt 0.0.11                   UTF-8                         2021-11-01
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-                      Native Windows raylib Laboratory
-                      ================================
+                      Native Windows raylib Companion
+                      ===============================
 
                      <https://github.com/orcmid/rayLab>
           <https://github.com/orcmid/rayLab/blob/main/rayLab.txt>
 
-            EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
+            COMPANION TO RAYLIB FOR USAGE IN NATIVE WINDOWS APPS
 
-                        SHADOWED RAYLIB EXPERIMENTATION
-                        -------------------------------
+                        RAYLIB COMPANION LABORATORY
+                        ---------------------------
 
     [Synopsis TBD]
 
@@ -80,8 +80,8 @@ MANIFEST
 
  ATTRIBUTION
 
-   Hamilton, Dennis E. Shadowed raylib Experimentation.  rayLab project
-   text file rayLab.txt version 0.0.10 dated 2021-10-26, available on the
+   Hamilton, Dennis E. raylib Companion Laboratory.  rayLab project
+   text file rayLab.txt version 0.0.11 dated 2021-11-01, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/main/rayLab.txt>
 
@@ -108,8 +108,16 @@ TODO
 
   * Provide structure and additional pages to /docs
 
+  * Repurpose rayLab to be a raylib companion for Native Windows development
+
+    ** Reflect on all scaffolding (*.txt) files
+    ** Reflect on docs/ (*.md) files
+    ** Reflect on README.md
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.11 2021-11-01T17:48Z Begin repurposing to serve as a raylib companion
+        for Native Windows development
  0.0.10 2021-10-26T01:46Z Change "master" to "main" throughout
  0.0.9 2021-10-17T19:34Z Begin switching GitHub URLs to use main, not master
  0.0.8 2021-08-30T19:38Z add rulers
