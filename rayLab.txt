@@ -1,4 +1,4 @@
-rayLab.txt 0.0.11                   UTF-8                         2021-11-01
+rayLab.txt 0.0.12                   UTF-8                         2021-11-15
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                       Native Windows raylib Companion
@@ -95,16 +95,10 @@ TODO
 
   * Complete the construction structure down to projects/scripts
 
-  * Replicate the build-windows.bat case that worked already and that
-    shows the different *.obs produced as fixed static components.
-
   * Update NOTICE.txt with ways to respect the raylib license
     and those of raylib dependencies.
 
   * Add attribution boilerplates.
-
-  * Figure out whether wiki renderings handle images without degradations
-    as is the case for docs/, but not for the README here.
 
   * Provide structure and additional pages to /docs
 
@@ -114,8 +108,19 @@ TODO
     ** Reflect on docs/ (*.md) files
     ** Reflect on README.md
 
+  * Shift to having rayLab rely on the VCrayMumble templates, with appropriate
+    change to the nesting of folders.  Do not follow the raylib struccture any
+    more.
+
+  * VCrayTest may be an appropriate case here.
+
+  * When the nfoTools setup for VCrayMumbles is achieved, identify and use
+    the ones that work here for laboratory purposes.
+
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.12 2021-11-15T18:29Z Prepare for refactoring and alignment with the
+        nfoTools VCrayMumble templates and setups.
  0.0.11 2021-11-01T17:48Z Begin repurposing to serve as a raylib companion
         for Native Windows development
  0.0.10 2021-10-26T01:46Z Change "master" to "main" throughout
