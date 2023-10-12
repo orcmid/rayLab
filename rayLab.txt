@@ -1,4 +1,4 @@
-rayLab.txt 0.0.12                   UTF-8                         2021-11-15
+rayLab.txt 0.0.13                   UTF-8                         2023-10-12
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                       Native Windows raylib Companion
@@ -62,7 +62,7 @@ MANIFEST
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-                       Copyright 2021 Dennis E. Hamilton
+                    Copyright 2021, 2023 Dennis E. Hamilton
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -81,11 +81,22 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. raylib Companion Laboratory.  rayLab project
-   text file rayLab.txt version 0.0.11 dated 2021-11-01, available on the
+   text file rayLab.txt version 0.0.13 dated 2023-10-12, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/main/rayLab.txt>
 
 TODO
+
+  * I have not touched this in almost 2 years, spending more energy on
+    VCrayApp, C Language materials, and, lately, repurposing my web-site
+    materials onto orcmid.github.io along with use of FrontPage once again.
+    This is more like myCleanC except focused on raylib.
+
+  * I'm not so thrilled about raylib as I was when I first encountered it.
+    I need to consider how to engage in defensive programming and nfoTools-
+    style confirmation.  Also, I won't be needing any of this for the Miser
+    Project and that needs to become a serious priority once the repurposing
+    of web sites is completed.
 
   * Complete the scaffolding down from here.
 
@@ -119,6 +130,7 @@ TODO
 
 ----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.13 2023-10-12T16:12Z TODO on reconsiderations for this project
  0.0.12 2021-11-15T18:29Z Prepare for refactoring and alignment with the
         nfoTools VCrayMumble templates and setups.
  0.0.11 2021-11-01T17:48Z Begin repurposing to serve as a raylib companion
