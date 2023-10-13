@@ -1,5 +1,5 @@
-projects.txt 0.0.2                  UTF-8                         2021-10-26
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+projects.txt 0.0.3                  UTF-8                         2023-10-13
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
                          ================================
@@ -9,30 +9,37 @@ projects.txt 0.0.2                  UTF-8                         2021-10-26
 
             EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
 
-                        SHADOWED RAYLIB PROJECTS FOLDER
-                        -------------------------------
+                            RAYLAB PROJECTS FOLDER
+                            ----------------------
 
-    The raylib/projects consist of various ways to build raylib-dependent
-    projects.
+    The rayLab/projects consist of various ways to build raylib-dependent
+    projects, focused on desktop builds using VC/C++ for Windows.
 
-    The comparable rayLab/projects are designed to fit in a way that can
-    be incorporated in projects that are in shadow structures or inserted
-    directly into a working copy of raylib.
-
-    Further details will depend on exactly how that works out.
+    The rayLab/projects are designed to provide utilities and experiments
+    related to raylib in a form that can be replicated/adapted by other users.
 
 MANIFEST
 
-    sources.txt
+    projects.txt
         this manifest and job-jar file
+
+    raylib/
+        pristine clone of the raysan5/raylib/ repository, excluded from
+        the orcmid/rayLab repository by .gitignore here.  A clone is used
+        when confirming with the latest working master.  For production
+        development projects, release Zips are extracted and renamed to
+        simply raylib/, if necessary, so that all in-project references are to
+        raylib/ regardless of the version installed.  This placement favors
+        the use of VCrayApp neighbors of the raylib/ folder.
 
     scripts/
         development of reusable script cases using VC build environment
+        (obsolete)
 
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-                       Copyright 2021 Dennis E. Hamilton
+                    Copyright 2021, 2023 Dennis E. Hamilton
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -46,43 +53,23 @@ MANIFEST
     See the License for the specific language governing permissions and
     limitations under the License.
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
  ATTRIBUTION
 
-   Hamilton, Dennis E. Shadowed raylib Projects Folder.  rayLab project
-   text file projects.txt version 0.0.2 dated 2021-10-26, available on the
-   Internet as a version of
-   <https://github.com/orcmid/rayLab/blob/main/projects/projeccts.txt>
+   Hamilton, Dennis E. rayLab Projects Folder.  rayLab project text file
+   projects.txt version 0.0.3 dated 2023-10-13, available on the Internet
+   as a version of
+   <https://github.com/orcmid/rayLab/blob/main/projects/projects.txt>
 
 TODO
 
-  * Replicate the build-windows.bat case that worked already and that
-    shows the different *.obs produced as fixed static components.
+ * Create a project for scaling of rayapp Windows and operations stated in
+   terms of unscaled pixels.
 
-  * Figure out how to build and exercise the raylib examples using a couple
-    of WinCon-like build setups.
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-  * Determine whether there is a way that inserting projects into a working
-    copy of raylib or in a shadow structure can work the same regardless.
-    This tends to mean that relative links into raylib for includes and
-    other artifacts will work properly.
-
-  * raylib/examples are in subgroups and the code in them makes reference to
-    resources that are in a subfolder of the folder having the example. This
-    has to be taken into account when the compiled executables run.  One way
-    would be to always copy the resources/ folder into the folder having the
-    compiled executable.
-
-  * We don't want the .obj files and other intermediates in the same location
-    as the compiled .exe.  We want the .exe be in a folder of its own along
-    with any copied resources.
-
-  * We need to sneak up on this.  Start with simple cases and refine what
-    works as we go.
-
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
-
+ 0.0.3 2023-10-13T16:58Z Restructure for using VCrayApp in experiments.
  0.0.2 2021-10-26T00:35Z Replace master with main in all URLs into the repo
  0.0.1 2021-09-25T23:17Z introduce scripts/, manage TODOs
  0.0.0 2021-09-25T22:55Z placeholder for building down to scripts and/or other

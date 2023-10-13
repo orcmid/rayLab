@@ -1,5 +1,5 @@
-rayLab.txt 0.0.13                   UTF-8                         2023-10-12
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+rayLab.txt 0.0.14                   UTF-8                         2023-10-13
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                       Native Windows raylib Companion
                       ===============================
@@ -24,20 +24,12 @@ MANIFEST
         is published
 
     projects/
-        shadow of the corresponding raylib/projects/ folder
-
-    raylib/
-        pristine clone of the raysan5/raylib/ repository, excluded from
-        the orcmid/rayLab repository by .gitignore here.  A clone is used
-        when confirming with the latest working master.  For production
-        development projects, release Zips are extracted and renamed to
-        simply raylib/, if necessary, so that all in-project references are to
-        raylib/ regardless of the version installed.
+        rayLab/projects/ folder
 
     raylib-3.7.0.zip
-        current raylib stable release (absent extras and externals) that
-        rayLab experiments are currently performed with (pending availability
-        of a raylib 4)
+        raylib stable release (absent extras and externals) that rayLab
+        rayLab experiments were performed with (pending availability
+        of a raylib 4.x)
 
      README.md
          The introduction page viewed automatically at orcmid/rayLab/ on
@@ -60,7 +52,7 @@ MANIFEST
          repositories, applying to working files that are not part of the
          managed archive materials
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                     Copyright 2021, 2023 Dennis E. Hamilton
 
@@ -76,12 +68,12 @@ MANIFEST
     See the License for the specific language governing permissions and
     limitations under the License.
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
  ATTRIBUTION
 
    Hamilton, Dennis E. raylib Companion Laboratory.  rayLab project
-   text file rayLab.txt version 0.0.13 dated 2023-10-12, available on the
+   text file rayLab.txt version 0.0.14 dated 2023-10-13, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/main/rayLab.txt>
 
@@ -102,7 +94,7 @@ TODO
 
   * Complete the .gitattributes and .gitignore for here
 
-   * Add README warning about breaking raylib changes and focus on raylib 4.
+  * Add README warning about breaking raylib changes and focus on raylib 4.
 
   * Complete the construction structure down to projects/scripts
 
@@ -114,22 +106,19 @@ TODO
   * Provide structure and additional pages to /docs
 
   * Repurpose rayLab to be a raylib companion for Native Windows development
+    of potentially generic platform aids.
 
     ** Reflect on all scaffolding (*.txt) files
     ** Reflect on docs/ (*.md) files
     ** Reflect on README.md
 
-  * Shift to having rayLab rely on the VCrayMumble templates, with appropriate
-    change to the nesting of folders.  Do not follow the raylib struccture any
-    more.
-
-  * VCrayTest may be an appropriate case here.
-
   * When the nfoTools setup for VCrayMumbles is achieved, identify and use
     the ones that work here for laboratory purposes.
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.14 2023-10-13T17:06Z Repurpose and restructure for development of
+        companion utility functions.
  0.0.13 2023-10-12T16:12Z TODO on reconsiderations for this project
  0.0.12 2021-11-15T18:29Z Prepare for refactoring and alignment with the
         nfoTools VCrayMumble templates and setups.
