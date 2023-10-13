@@ -1,5 +1,5 @@
-rawVC.txt 0.0.10                     UTF-8                         2021-10-26
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+rawVC.txt 0.0.11                     UTF-8                         2023-10-13
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
                          ================================
@@ -12,6 +12,9 @@ rawVC.txt 0.0.10                     UTF-8                         2021-10-26
                       RAWVC BARE-BONES VC COMPILE SETUP
                       ---------------------------------
 
+            **** THIS PROJECT IS OBSOLETED BY NFOTOOLS VCRAYAPP ****
+            ********************************************************
+
     The raylib/projects/scripts/rawVC folder is for a tear-down of the raylib
     build-windows.bat to a minimum case that works in a Command Prompt
     command-line environment that is already established.
@@ -23,9 +26,9 @@ rawVC.txt 0.0.10                     UTF-8                         2021-10-26
     on any simple raylib-using project, with minimal adjustments and using
     the .zip extract technique for staging customizable working materials.
 
-    The result will probably be rayVC and will assume that there is better
-    proximity between the user src/, the wrk/ and app/ folders, after an
-    unZip at a raylib-adjacent folder.
+    THIS EXPERIMENT IS CONCLUDED.  THE NFOTOOLS VCRAYAPP DEVKIT APPLIES THE
+    METHODOLOGY TO A COMPLETE CONSTRUCTION SCRIPT AND A SUPPORTING DEVELOPMENT
+    FOLDER STRUCTURE.  SEE <https://orcmid.github.io/nfoTools/dev/D211101/>.
 
 MANIFEST
 
@@ -56,9 +59,9 @@ MANIFEST
         folder for the compiled .exe and also any resources that are
         expected local to the executable
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-                       Copyright 2021 Dennis E. Hamilton
+                   Copyright 2021, 2023 Dennis E. Hamilton
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -72,7 +75,7 @@ MANIFEST
     See the License for the specific language governing permissions and
     limitations under the License.
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
  ATTRIBUTION
 
@@ -81,71 +84,10 @@ MANIFEST
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/main/projects/scripts/rawVC/rawVC.txt>
 
-TODO
 
-  * Figure out how to build and exercise the raylib examples using a couple
-    of WinCon-like build setups.
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-  * We need to sneak up on this.  Start with simple cases and refine what
-    works as we go.
-
-  * The editable .opt files are ways to have them be under source-control,
-    be make dependencies, and also have them be more understandable.  The
-    ones used should be customizable outside of a clone though.  Think more.
-
-  * Initially, just build everything, needed or not.  This will be find for
-    compiling examples.  The use of a clean option is valuable.
-
-  * The resources folder needs to be in the app folder. That might be sketchy.
-
-  * Need to deal with license combinations.  E.g., the raylib dependency and
-    license, and the license here.  That's normally handled with a NOTICE and
-    maybe that should be the case here.  These executables using raylib
-    examples are clearly all raylib licensed.  If I contribute any new script,
-    it will be under the raylib license and not have any others.  Watch it.
-
-  * The cache/ folder might need its own clean script?
-
-  * I guess these are rayLab options command files.  Maybe that's not quite
-    it, or we can presume someone would know how to rename them for other
-    cases.
-
-  * I am going to be righteous about not doing debugging builds.  There is
-    only one build and it is the one that "ships."  So if there is logging and
-    other provisions (e.g., symbols), they come along for the ride.  The idea
-    is not to have such a crutch in early learning.  Confirmable experience
-    and the ability to analyze is what I want to cultivate.  The /w option
-    is also a problem, although it might be necessary with regard to building
-    the raylib *.c files.  I am hating exposing beginners to this.
-
-  * I want to keep the scripts and options at the level above app and cache.
-    I am beginning to think having them in cache/ is appropriate when thinking
-    about these being kits. [2021-10-26 I think that's not where options go,
-    options need to be at the level above in the current scheme.]
-
-  * I think there might be another option file, and a couple of batch files.
-
-  * I have surrendered to the need to compile the raylib files with /w.  For
-    the specific files, /w3 and /sdl are used to get non-trivial warnings.
-
-  * Now that build-windows.bat works and is boiled down to essentials,
-    start taking things apart to get a repeatable case with a simpler set
-    of operations using @*.opt files.
-
-  * Start assuming a src/ folder and compile everything in it.  This will
-    need to be covered by an /I inclusion too.
-
-  * Start putting the source .objs in the cache/ folder too.  This should be
-    independent of naming the app.  [2021-10-16 so some things have very
-    short cache lifetimes]
-
-  * Confirm that environment variables in *.opt files are not expanded and
-    figure out a work-around.
-
-  * This should be rayVC when stabilized.
-
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
-
+ 0.0.11 2023-10-13T16:20Z Obsolete in favor of nfoTools VCrayApp
  0.0.10 2021-10-26T02:04Z Rename wrk/ to cache/
  0.0.9 2021-10-26T00:40Z Touch up and change "master" to "main"
  0.0.8 2021-10-02T17:26Z Expand TODOs

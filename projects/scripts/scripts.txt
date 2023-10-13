@@ -1,5 +1,5 @@
-scripts.txt 0.0.3                   UTF-8                         2021-10-26
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+scripts.txt 0.0.4                   UTF-8                         2023-10-13
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
                          ================================
@@ -29,10 +29,11 @@ MANIFEST
 
     rawVC/
         establishment of a bare VC compilation with Command Prompt
-        environment already established
+        environment already established [Obsolete.  See nfoTools VCrayApp
+        for the developed solution.]
 
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                        Copyright 2021 Dennis E. Hamilton
 
@@ -48,46 +49,26 @@ MANIFEST
     See the License for the specific language governing permissions and
     limitations under the License.
 
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
  ATTRIBUTION
 
    Hamilton, Dennis E. Experimental Raylib Script Cases.  rayLab project
-   text file scripts.txt version 0.0.3 dated 2021-10-26, available on the
+   text file scripts.txt version 0.0.4 dated 2021-11-13, available on the
    Internet as a version of
    <https://github.com/orcmid/rayLab/blob/main/projects/scripts/scripts.txt>
 
 TODO
 
-  * Replicate the build-windows.bat case that worked already and that
-    shows the different *.obs produced as fixed static components.
-
-  * Figure out how to build and exercise the raylib examples using a couple
-    of WinCon-like build setups.
-
-  * Determine whether there is a way that inserting projects into a working
-    copy of raylib or in a shadow structure can work the same regardless.
-    This tends to mean that relative links into raylib for includes and
-    other artifacts will work properly.
-
   * raylib/examples are in subgroups and the code in them makes reference to
     resources that are in a subfolder of the folder having the example. This
     has to be taken into account when the compiled executables run.  One way
     would be to always copy the resources/ folder into the folder having the
-    compiled executable.
+    compiled executable.  This consideration is moved to nfoTools VCrayTest.
 
-  * We don't want the .obj files and other intermediates in the same location
-    as the compiled .exe.  We want the .exe be in a folder of its own along
-    with any copied resources.
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-  * We need to sneak up on this.  Start with simple cases and refine what
-    works as we go.
-
-  * Take the raylib/scripts/build-windows.bat and core_basic_windows.c down
-    a level to a raw case.
-
-----|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
-
+ 0.0.4 2023-10-13T16:21Z Cleanup TODOs and obsolete rawVC
  0.0.3 2021-10-26T00:34Z Replace repo master references to main references
  0.0.2 2021-09-29T18:08Z Reflect change from rawCL/ to rawVC/
  0.0.1 2021-09-25T23:47Z Establish rawCL/ and manage TODOs
