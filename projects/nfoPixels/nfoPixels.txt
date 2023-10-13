@@ -1,0 +1,77 @@
+nfoPixels.txt 0.0.0                 UTF-8                         2023-10-13
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
+                         Native Windows raylib Laboratory
+                         ================================
+
+
+      <https://github.com/orcmid/rayLab/blob/main/projects/projects.txt>
+
+            EXPLORATION OF RAYLAB USAGE IN NATIVE WINDOWS APPS
+
+                    nfoPixels Graphical Display Normalizer
+                    --------------------------------------
+
+    nfoPixels consists of a header file and one or more implementation
+    files for reporting and adjusting to the characteristics of raster
+    displays.  Operations are in terms of pixel coordinates in standard
+    graphical form: X and Y both increasing with (0,0) in the upper left
+    corner in the viewer's perspective.
+
+    nfoPixels is based, as is raylib, in the "standard" DPI being taken as
+    96 for Windows and 72 for Apple.  There is some possible trickery though
+    (https://en.wikipedia.org/wiki/Dots_per_inch#Computer_monitor_DPI_standards).
+
+    For every platform, the scaling business needs to be addressed in a way
+    that has desktop builds of the same program produce visually-comparable
+    display results.
+
+    The architecture of nfoPixels allows for customization to support more
+    platforms by additions, preserving the API as portable.  The base
+    implementation is specific to Windows desktop applications because I have
+    no means to support other cases.
+
+    nfoPixels will be included in the VCrayApp cache for employment in
+    VCrayConfirm compilations, demonstrating its effectiveness for VCrayApp
+    projects.
+
+MANIFEST
+
+    nfoPixels.txt  This synopsis and manifest
+
+
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
+                            2023 Dennis E. Hamilton
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
+ ATTRIBUTION
+
+   Hamilton, Dennis E. nfoPixels Graphical Display Normalizer.  rayLab project
+   text file nfoPixels.txt version 0.0.0 dated 2023-10-13, available on the
+   Internet as a version of
+
+ <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/nfoPixels.txt>
+
+TODO
+
+    [TBD]
+
+*---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
+
+ 0.0.0 2023-10-13T20:47Z placeholder for building up to VC building case.
+
+                      ***** end of nfoPixels.txt *****
