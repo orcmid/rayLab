@@ -1,4 +1,4 @@
-Win32-display.txt 0.0.0             UTF-8                         2023-10-14
+Win32-display.txt 0.0.1             UTF-8                         2023-10-14
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -24,8 +24,29 @@ Win32-display.txt 0.0.0             UTF-8                         2023-10-14
 
 DETECTING WINDOWS VERSION
 
+    The detection of a Windows Version is muddled because the response does
+    not always indicate whether a facility is present or not.  The
+    recommendation is to check for the specific feature.  See
+    <https://learn.microsoft.com/en-us/windows/win32/sysinfo/getting-the-system-version>.
+    The following information is still a bit too cryptic:
+    <https://learn.microsoft.com/en-us/windows/win32/sysinfo/operating-system-version>.
 
+    I am willing to require Windows 7 or later, especially since only x64
+    builds are being entertained.  So version 6.1 or greater is appropriate.
+    I can also use the Version API Helper functions to determine that.
 
+    IMPORTANT: I do not assume that a manifest has been created, so the
+    no-manifest response for Windows 8.1 and later will happen.  That still
+    satisfies the IsWindows7OrGreater() request.
+
+    IMPORTANT 2: I am assuming that <VersionHelpers.h> is present though, with
+    builds happening using SDKs at least as recent as Windows 8.1 ones.
+    <https://learn.microsoft.com/en-us/windows/win32/api/versionhelpers/nf-versionhelpers-iswindows7orgreater>.
+    It is tricky to test for this at compile time though.
+
+    This function depends on Kernel32.lib and Ntdll.lib.  I might be able to
+    do File Finds in scripts to determine if this is the case, although
+    presence is not foolproof, but absence is almost (but for drive cases).
 
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
@@ -112,6 +133,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.1 2023-10-14T17:23Z Initial consideration of Windows Version detection
  0.0.0 2023-10-14T16:30Z placeholder derived from nfoPixels.txt 0.0.1.
 
                     ***** end of Win32-display.txt *****
