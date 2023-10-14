@@ -1,4 +1,4 @@
-nfoPixels.txt 0.0.2                 UTF-8                         2023-10-14
+nfoPixels.txt 0.0.3                 UTF-8                         2023-10-14
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -41,6 +41,11 @@ MANIFEST
 
     Win32-display.txt  Analysis for Win32 Display Characteristics Detection
 
+         mkGetVer.bat  compiling nfoGetVer.c
+     mkGetVHelper.bat  compiling nfoGetVHelper.c
+        nfoGetVer.c    Program to get version with GetVersionExA
+    nfoGetVHelper.c    Program to use Windows Version Helper (maybe enough)
+
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
@@ -79,6 +84,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.3 2023-10-14T22:16Z Reflect nfoGetVer.c and nfoGetVHelper.c
  0.0.2 2023-10-14T16:37Z Split out to Win32-display.txt for investigations
  0.0.1 2023-10-14T02:48Z Noodling in the TODO
  0.0.0 2023-10-13T20:47Z placeholder for building up to VC building case.
