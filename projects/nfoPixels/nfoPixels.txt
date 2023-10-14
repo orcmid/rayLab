@@ -1,4 +1,4 @@
-nfoPixels.txt 0.0.0                 UTF-8                         2023-10-13
+nfoPixels.txt 0.0.1                 UTF-8                         2023-10-14
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -61,17 +61,66 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. nfoPixels Graphical Display Normalizer.  rayLab project
-   text file nfoPixels.txt version 0.0.0 dated 2023-10-13, available on the
+   text file nfoPixels.txt version 0.0.1 dated 2023-10-43, available on the
    Internet as a version of
 
  <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/nfoPixels.txt>
 
 TODO
 
-    [TBD]
+ * Review "DisplayCnfigGetDeviceInf", "EnumDisplaySettingsA",
+   "EnumDisplaySettingsExA", "EnumPropsA", "EnumbPropsExA",
+   "GetDpiAwarenessContextForProcess", GetDpiForSystem, GetDPIForWindow
+   GetMonitorInfoA, GetProcessWindowStation,GetSystemDpiForProcess,
+   GetThreadDpiAwarenessContext, GetWindowsDpiAwarenessContext,
+   GetWindowDpiHostingBehavior, GetProcessDPIAwareness,
+   SetProcessDpiAwarenessContext,SetThreadDpiAwarenessContext, those are from
+   DPI_AWARENESS_CONTEXT
+
+ * Possibly also important: HIGHCONTTASTA, MONITORINFO, MONITORINFOEX,
+   SERIALKEYSA, SOUNDSENTRYA, STICKYKEYS, TOGGLEKEYS
+
+ * High DPI is described at
+   <https://learn.microsoft.com/en-us/windows/win32/api/_hidpi/>.
+   DPI_AWARENESS enumerations identify dots per inch setting
+   MONITOR_DPI_TYPE identifies dpi for a monitor
+   PROCESS_DPI_AWARENESS how much scaling an application performs for dpi
+   versus how much is done by the system.
+   GetDpiForMonitor queries the dpi of a display.
+   GetDpiForSystem returns the system dpi.
+
+ * It looks like SetDpiAwareness(PROCESS_DPI_AWARENESS value)
+   could be used to learn it has been set already or specify that it will be
+   handled by the app.  This only works since Windows 8.1 desktop apps.
+
+ * SetThreadDpiAwarenessContext(DPI_AWARENESS_CONTEXT dpiCtx) may be better.
+   It is defined in winuser.h but it is only supported since Windows 10 v1607.
+   It also replaces a given one, returning the one replaced else NULL for
+   no dice.
+
+ * We need to see if we can check whether different DPI Awareness support is
+   present.  The DPI_AWARENESS enumeration (windef.h) is available only for
+   Windows 10 and later desktop apps.  GetDpiAwarenessContextForProcess will
+   get things for the current process when given a NULL handle.
+
+ * I need to write small test applications to see how to get DPI information
+   and also deal with automatic or manifest set scaling.
+
+ * The test applications need to be considerate of Windows 10/11, Windows 8.1,
+   and earlier than Windows 8.1.
+
+ * On Windows 10/11, GetDpiFromDpiAwarenessContext
+                         (GeDpiAwarnessContextforProcess(NULL))
+         returns a UINT DPI value, but 0 for per-monitor Contexts.
+   Also, DPI_AWARENESS_CONTEXT_UNAWARE will be defined. We also need to be
+   attentive to DPI_AWARENESS_CONTECT_UNAWARE_GDISCALED.  This is all
+   Windows 10/11.
+
+
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.1 2023-10-14T02:48Z Noodling in the TODO
  0.0.0 2023-10-13T20:47Z placeholder for building up to VC building case.
 
                       ***** end of nfoPixels.txt *****
