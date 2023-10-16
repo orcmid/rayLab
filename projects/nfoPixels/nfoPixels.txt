@@ -1,4 +1,4 @@
-nfoPixels.txt 0.0.3                 UTF-8                         2023-10-14
+nfoPixels.txt 0.0.4                 UTF-8                         2023-10-16
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -46,6 +46,23 @@ MANIFEST
         nfoGetVer.c    Program to get version with GetVersionExA
     nfoGetVHelper.c    Program to use Windows Version Helper (maybe enough)
 
+W10-2023-10-15-1034-110dpi-Scaled.png   918x707 in pixels
+W10-2023-10-15-1037-SystemDisplay.png   492x491 in pixels
+W11-2023-10-15-1006-200dpi-Scaled.png  1236x1020 in pixels
+W11-2023-10-15-1009-SystemDisplay.png   1682x500 in pixels
+    These screen captures are best compared when viewed at a corrected zoom so
+    that the 110dpi pixels display on one dpi of the display viewed on,
+    the same for the 200dpi.  An easy case is 91% for the 110dpi and 50% for
+    the 200dpi.
+W11xW10-2023-10-15-1700-SideBySideNormalized.png (view at 100%)
+    This demonstrates the two Scaled images adjusted so they appear at the
+    same DPI, whatever resolution this is viewed at.  Notice that scaling is
+    done by Windows for GUI elements, but for raster images created using
+    fixed dimensions in pixels there is no automatic-scaling to adjust for
+    differences in display resolution and any user-selected GUI scaling.  The
+    200dpi image does show that the GUI elements of the frame, such as the
+    title bar, are scaled.
+
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
@@ -68,7 +85,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. nfoPixels Graphical Display Normalizer.  rayLab project
-   text file nfoPixels.txt version 0.0.2 dated 2023-10-14, available on the
+   text file nfoPixels.txt version 0.0.4 dated 2023-10-16, available on the
    Internet as a version of
 
  <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/nfoPixels.txt>
@@ -84,6 +101,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.4 2023-10-16T00:13Z Demonstrate scalings comparison side-by-side.
  0.0.3 2023-10-14T22:16Z Reflect nfoGetVer.c and nfoGetVHelper.c
  0.0.2 2023-10-14T16:37Z Split out to Win32-display.txt for investigations
  0.0.1 2023-10-14T02:48Z Noodling in the TODO
