@@ -1,4 +1,4 @@
-Win32-display.txt 0.0.2             UTF-8                         2023-10-14
+Win32-display.txt 0.0.3             UTF-8                         2023-10-18
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -51,6 +51,9 @@ DETECTING WINDOWS VERSION
 
     <windows.h> must be included along with the Helper include.  Then the
     program nfoGetVHelper.c compiles and executes just as nfoGetVer.c does.
+
+    This is important:
+    <https://blogs.windows.com/windowsdeveloper/2017/05/19/improving-high-dpi-experience-gdi-based-desktop-apps/>
 
 
 DETECTING MONITOR DPI
@@ -109,6 +112,9 @@ DETECTING MONITOR DPI
     I have to run a test case to see what's going on.  This looks like a job
     for a showdefs procedure.
 
+    ShowDpiAwareness.c Provides one case using the DpiAwarenessContext case.
+    The mkShowDpiAwareness.bat file reflects the need for User32.lib.
+
 
 
 
@@ -133,8 +139,7 @@ DETECTING MONITOR DPI
  ATTRIBUTION
 
    Hamilton, Dennis E. Win32 Display Characteristics Detection. rayLab project
-    text file Win32-display.txt version 0.0.2
-    dated 2023-10-14, available on
+   text file Win32-display.txt version 0.0.3 dated 2023-10-18, available on
    the Internet as a version of
  <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/Win32-display.txt>
 
@@ -197,6 +202,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.3 2023-10-18T12:55Z Advance to ShowDpiAwareness.c
  0.0.2 2023-10-14T22:08Z Reflect results from nfoGetVHelper.c
  0.0.1 2023-10-14T17:23Z Initial consideration of Windows Version detection
  0.0.0 2023-10-14T16:30Z placeholder derived from nfoPixels.txt 0.0.1.
