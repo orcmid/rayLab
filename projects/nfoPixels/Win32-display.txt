@@ -53,6 +53,64 @@ DETECTING WINDOWS VERSION
     program nfoGetVHelper.c compiles and executes just as nfoGetVer.c does.
 
 
+DETECTING MONITOR DPI
+
+    Note that preprocessor-defined USER_DEFAULT_SCREEN_DPI can be queried for.
+    Also, preprocessor message type WM_DPICHANGED is a message that apparently
+    arose with Windows 8.1 or later and that could be checked for as well.
+
+    HRESULT GetProcessDpiAwareness
+              (                 HANDLE hprocess,
+                 PROCESS_DPI_AWARENESS *value
+                 );
+
+    this is defined in <shellscalingapi.h> but we might want to know more
+    before including it.
+
+    for hprocess == NULL will return the value for the current process.  The
+    PROCESS_DPI_AWARENESS is an enumeration type such that
+                                  PROCESS_DPI_UNAWARE = 0,
+                             PROCESS_SYSTEM_DPI_AWARE = 1,
+                        PROCESS_PER_MONITOR_DPI_AWARE = 2
+
+    There is also a DPI_AWARENESS_CONTEXT to use rather than using the
+    application manifest.  That's because of the per-monitor business.
+
+    PROCESS_DPI_UNAWARE is the default. The system will automatically scale
+    these and PROCESS_SYSTEM_DPI_AWARE apps when DPI change messages happen.
+
+    This function is said to be identical to
+
+      GetAwarenessFromDpiAwarenessContext
+         ( GetThreadDpiAwarenessContext() );
+
+    It is difficult to see how that comes to be, since no value parameter is
+    provided.
+
+       DPI_AWARENESS_CONTEXT GetThreadDpiAwarenessContext();
+
+    is available (via Windows.h) since Windows 10 version 1607 as is.  If the
+    thread context has never been set, the value returned is the default
+    DPI_AWARENESS_CONTEXT for the process, and that's what we want.
+
+       DPI_AWARENESS GetAwarenessFromDpiAwarenessContext
+                          ( DPI_AWARENESS_CONTEXT value);
+
+    Here it gets useful.  DPI_AWARENESS_CONTEXT is called a handle but it is
+    apparently a #defined thing.  And it seems to have more values than
+    PROCESS_DPI_AWARENESS defines as an enumeration. There are two new cases,
+    DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_2 (Creators Windows 10 Update) and
+    DPI_AWARENESS_CONTEXT_UNAWARE_GDISCALED (with Windows 10 1809).
+
+    I am suspicion of the DPI_AWARENESS_CONTEXT being described as a type
+    and also having a numeric value.  This is also at odds with there being
+    multiple types of information in it or whatever those defines really mean.
+
+    I have to run a test case to see what's going on.  This looks like a job
+    for a showdefs procedure.
+
+
+
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
@@ -87,7 +145,7 @@ TODO
    to see if the DEFINEs are present from windows.h and the ilk).  Functions
    available to Windows 7 desktop clients are preferred.
 
- * Review "DisplayCnfigGetDeviceInfo", "EnumDisplaySettingsA",
+ * Review "DisplayConfigGetDeviceInfo", "EnumDisplaySettingsA",
    "EnumDisplaySettingsExA", "EnumPropsA", "EnumbPropsExA",
    "GetDpiAwarenessContextForProcess", GetDpiForSystem, GetDPIForWindow
    GetMonitorInfoA, GetProcessWindowStation,GetSystemDpiForProcess,
