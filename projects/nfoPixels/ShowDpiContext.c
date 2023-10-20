@@ -1,4 +1,4 @@
-/* ShowDPIContext.c 1.0.0           UTF-8                         2023-10-18
+/* ShowDPIContext.c 1.0.1           UTF-8                         2023-10-20
  * -|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
  *
  *             SHOW DPI CONTEXT INFORMATION FOR WINDOWS
@@ -59,12 +59,13 @@ int main(void)
 
        char *tv;  /* pointer to the token value string */
 
-       fputs(  "\nShowDpiContext> 1.0.0 "
+       fputs(  "\nShowDpiContext> 1.0.1 "
                "Inspection for DPI Context Information\n\n",
               stdout);
 
        SHOW(USER_DEFAULT_SCREEN_DPI, "                     ");
        SHOW(WM_DPICHANGED, "                               ");
+           // Introduced with Windows 8.1 desktop apps
        SHOW(DPI_AWARENESS_CONTEXT, "                       ");
        SHOW(DPI_AWARENESS_CONTEXT_UNAWARE, "               ");
        SHOW(DPI_AWARENESS_CONTEXT_SYSTEM_AWARE, "          ");
@@ -107,6 +108,7 @@ int main(void)
 
 
 /*
+ *  1.0.1  2023-10-20T19:27Z Touch-up
  *  1.0.0  2023-10-18T02:50Z Initial version
  *
  *                   *** end of ShowDpiContext.c ***                      */

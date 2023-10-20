@@ -1,4 +1,4 @@
-Win32-display.txt 0.0.3             UTF-8                         2023-10-18
+Win32-display.txt 0.0.4             UTF-8                         2023-10-20
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -139,11 +139,21 @@ DETECTING MONITOR DPI
  ATTRIBUTION
 
    Hamilton, Dennis E. Win32 Display Characteristics Detection. rayLab project
-   text file Win32-display.txt version 0.0.3 dated 2023-10-18, available on
+   text file Win32-display.txt version 0.0.4 dated 2023-10-20, available on
    the Internet as a version of
  <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/Win32-display.txt>
 
 TODO
+
+ * I have been setting Windows HDR at the display level.  Windows 10 on DEL
+   XPS 8500, Windows 11 on Microsoft Surface Laptop Studio.
+<https://support.microsoft.com/en-us/windows/what-is-windows-hd-color-1afce12f-1f5a-88be-fcd8-bf16303a52f8>
+<https://support.microsoft.com/en-us/windows/calibrate-your-built-in-display-for-hdr-content-in-windows-de1c66fa-6cc0-b327-e73a-1bac6bd46bc0>
+   The calibration information is the same for Win10 and Win11
+   I chose 25 because I don't want paper white to be overly bright.  That
+   seems to work well on the Dell S3422DWG, although I notice blacks are a
+   a bit deeper.  But text is fine.  Not all versions of Windows 10 have this
+   facility and I will need to cope with that too.
 
  * Find the oldest-supported features.  Features that arrived in Windows 10 or
    in Windows 8.1 need to be checked for in the library being used (usually
@@ -202,6 +212,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.4 2023-10-20T19:23Z Look into HDR settings also
  0.0.3 2023-10-18T12:55Z Advance to ShowDpiAwareness.c
  0.0.2 2023-10-14T22:08Z Reflect results from nfoGetVHelper.c
  0.0.1 2023-10-14T17:23Z Initial consideration of Windows Version detection
