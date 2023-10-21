@@ -1,4 +1,4 @@
-projects.txt 0.0.4                  UTF-8                         2023-10-13
+myProjects.txt 0.0.5                UTF-8                         2023-10-21
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -20,7 +20,7 @@ projects.txt 0.0.4                  UTF-8                         2023-10-13
 
 MANIFEST
 
-    projects.txt
+    myProjects.txt
         this manifest and job-jar file
 
     nfoPixels/
@@ -65,7 +65,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. rayLab Projects Folder.  rayLab project text file
-   projects.txt version 0.0.3 dated 2023-10-13, available on the Internet
+   projects.txt version 0.0.5 dated 2023-10-21, available on the Internet
    as a version of
    <https://github.com/orcmid/rayLab/blob/main/projects/projects.txt>
 
@@ -73,6 +73,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.5 2023-10-21T17:07Z Rename to myProjects, avoiding a raylib confusion
  0.0.4 2023-10-13T19:50Z Introduce nfoPixels/
  0.0.3 2023-10-13T16:58Z Restructure for using VCrayApp in experiments.
  0.0.2 2021-10-26T00:35Z Replace master with main in all URLs into the repo
@@ -81,4 +82,4 @@ TODO
        levels of VC building cases.
 
 
-                      ***** end of projects.txt *****
+                      ***** end of myProjects.txt *****
