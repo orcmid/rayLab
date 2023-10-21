@@ -1,4 +1,4 @@
-nfoPixels.txt 0.0.7                 UTF-8                         2023-10-21
+nfoPixels.txt 0.0.8                 UTF-8                         2023-10-21
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -20,7 +20,7 @@ nfoPixels.txt 0.0.7                 UTF-8                         2023-10-21
 
     nfoPixels is based, as is raylib, on the "standard" DPI being taken as
     96 for Windows and 72 for Apple.  There is some possible trickery though
-    (https://en.wikipedia.org/wiki/Dots_per_inch#Computer_monitor_DPI_standards).
+ <https://en.wikipedia.org/wiki/Dots_per_inch#Computer_monitor_DPI_standards>.
 
     For every platform, the scaling business needs to be addressed in a way
     that has desktop builds of the same program produce visually-comparable
@@ -53,7 +53,9 @@ nfoPixels.txt 0.0.7                 UTF-8                         2023-10-21
 
     ABOUT SCREEN CAPTURES.  What is to be understood about the different
     screen captures is difficult to understand if the DPI and scaling are not
-    reflected.
+    reflected. The HDR effects are not accurately reflected in the HyperSnap
+    captures. In particular, improved shadow depth is not reflected for the
+    W11 Video/Streaming cases.
 
 MANIFEST
 
@@ -66,7 +68,7 @@ MANIFEST
         nfoGetVer.c    Program to get version with GetVersionExA
     nfoGetVHelper.c    Program to use Windows Version Helper (maybe enough)
 
-          W10-2023-10-15-1034-110dpi-Scaled.png   918x707 in pixels
+           W10-2023-10-15-1034-110dpi-Scaled.png   918x707 in pixels
                Lack of VCrayConfirm 0.1.15 scaling is not problematic
            W10-2023-10-15-1037-SystemDisplay.png   492x491 in pixels
      W10-2023-10-20-1208-WindowsHDSettings01.png 1032 x 981 in pixels
@@ -113,7 +115,7 @@ W11xW10-2023-10-15-1700-SideBySideNormalized.png (view at 100%)
  ATTRIBUTION
 
    Hamilton, Dennis E. nfoPixels Graphical Display Normalizer.  rayLab project
-   text file nfoPixels.txt version 0.0.7 dated 2023-10-21, available on the
+   text file nfoPixels.txt version 0.0.8 dated 2023-10-21, available on the
    Internet as a version of
 
  <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/nfoPixels.txt>
@@ -129,6 +131,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.8 2023-10-21T20:45Z Touch-up
  0.0.7 2023-10-21T19:48Z Add W11 HDR captures
  0.0.6 2023-10-21T16:46Z Expanded synopsis, more screen captures
  0.0.5 2023-10-20T19:34Z Initial notes on HDR
