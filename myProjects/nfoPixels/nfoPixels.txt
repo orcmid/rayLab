@@ -1,4 +1,4 @@
-nfoPixels.txt 0.0.6                 UTF-8                         2023-10-21
+nfoPixels.txt 0.0.7                 UTF-8                         2023-10-21
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -66,18 +66,22 @@ MANIFEST
         nfoGetVer.c    Program to get version with GetVersionExA
     nfoGetVHelper.c    Program to use Windows Version Helper (maybe enough)
 
-      W10-2023-10-15-1034-110dpi-Scaled.png   918x707 in pixels
-            Lack of VCrayConfirm 0.1.15 scaling is not problematic
-      W10-2023-10-15-1037-SystemDisplay.png   492x491 in pixels
-W10-2023-10-20-1208-WindowsHDSettings01.png 1032 x 981 in pixels
-W10-2023-10-20-1208-WindowsHDSettings01.png 1032 x 1310 in pixels
-            Captures on the display-level treatment of HDR, W10/W11
-    W10-2023-10-21-0918-DisplaySettings.png 1032 x 1136 in pixels
-    W10-2023-10-21-0910-AdvancedScaling.png 1032 x 1136 in pixels
-            More Details on the Display Settings dialogs for Windows 10/11
-      W11-2023-10-15-1006-200dpi-Scaled.png  1236x1020 in pixels
-            Lack of VCrayConfirm 0.1.15 scaling is a serious defect
-      W11-2023-10-15-1009-SystemDisplay.png   1682x500 in pixels
+          W10-2023-10-15-1034-110dpi-Scaled.png   918x707 in pixels
+               Lack of VCrayConfirm 0.1.15 scaling is not problematic
+           W10-2023-10-15-1037-SystemDisplay.png   492x491 in pixels
+     W10-2023-10-20-1208-WindowsHDSettings01.png 1032 x 981 in pixels
+     W10-2023-10-20-1208-WindowsHDSettings01.png 1032 x 1310 in pixels
+               Captures on the display-level treatment of HDR, W10/W11
+         W10-2023-10-21-0918-DisplaySettings.png 1032 x 1136 in pixels
+         W10-2023-10-21-0910-AdvancedScaling.png 1032 x 1136 in pixels
+               More Details on the Display Settings dialogs for Windows 10/11
+           W11-2023-10-15-1006-200dpi-Scaled.png  1236x1020 in pixels
+               Lack of VCrayConfirm 0.1.15 scaling is a serious defect
+           W11-2023-10-15-1009-SystemDisplay.png   1682x500 in pixels
+    W11-2023-10-21-1217-RecommendedStreaming.png  2204 x 1564 in pixels
+    W11-2023-10-21-1221-HDRDisplayLimitation.png  1717 x 1436 in pixels
+ W11-2023-`0-21-1225-HDRStreamingCalibration.png  2367 x 1573 in pixels
+
 W11xW10-2023-10-15-1700-SideBySideNormalized.png (view at 100%)
     This demonstrates the two Scaled images adjusted so they appear at the
     same DPI, whatever resolution this is viewed at.  Notice that scaling is
@@ -85,7 +89,7 @@ W11xW10-2023-10-15-1700-SideBySideNormalized.png (view at 100%)
     fixed dimensions in pixels there is no automatic-scaling to adjust for
     differences in display resolution and any user-selected GUI scaling.  The
     200dpi image does show that the GUI elements of the frame, such as the
-    title bar, are scaled.
+    title bar, are scaled.  That doesn't happen for some apps.
 
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
@@ -109,7 +113,7 @@ W11xW10-2023-10-15-1700-SideBySideNormalized.png (view at 100%)
  ATTRIBUTION
 
    Hamilton, Dennis E. nfoPixels Graphical Display Normalizer.  rayLab project
-   text file nfoPixels.txt version 0.0.6 dated 2023-10-21, available on the
+   text file nfoPixels.txt version 0.0.7 dated 2023-10-21, available on the
    Internet as a version of
 
  <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/nfoPixels.txt>
@@ -125,6 +129,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.7 2023-10-21T19:48Z Add W11 HDR captures
  0.0.6 2023-10-21T16:46Z Expanded synopsis, more screen captures
  0.0.5 2023-10-20T19:34Z Initial notes on HDR
  0.0.4 2023-10-16T00:13Z Demonstrate scalings comparison side-by-side.
