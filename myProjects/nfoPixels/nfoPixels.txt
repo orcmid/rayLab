@@ -1,4 +1,4 @@
-nfoPixels.txt 0.0.9                 UTF-8                         2023-10-24
+nfoPixels.txt 0.0.10                 UTF-8                         2023-11-18
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -44,6 +44,20 @@ nfoPixels.txt 0.0.9                 UTF-8                         2023-10-24
     which BGI was established, adjusting to modern platforms but not going
     crazy for all of the variations in operation that are now possible.
 
+    Ideally, we can use integer arithmetic scale factors in some cases.  On
+    Windows, Bing Chat recommended this C# solution
+
+       AI-generated code. Review and use carefully. More info on FAQ.
+
+       public static int GetWindowsScaling()
+       {
+           return (int)( 100 * Screen.PrimaryScreen.Bounds.Width /
+                         SystemParameters.PrimaryScreenWidth );
+       }
+
+    I need to check this.  Then I need to be able to detect whether the
+    information is here.
+
     THAT HAVING BEEN SAID: This is the 1.0 scoping.  It is important to learn
     about more-advanced situations and see what might be done for them.  It
     is not urgent and the 1.0 API will be rigorously preserved.  We only have
@@ -63,35 +77,38 @@ MANIFEST
 
     Win32-display.txt  Analysis for Win32 Display Characteristics Detection
 
-         mkGetVer.bat  compiling nfoGetVer.c
-     mkGetVHelper.bat  compiling nfoGetVHelper.c
-        nfoGetVer.c    Program to get version with GetVersionExA
-    nfoGetVHelper.c    Program to use Windows Version Helper (maybe enough)
+            mkGetVer.bat  compiling nfoGetVer.c
+        mkGetVHelper.bat  compiling nfoGetVHelper.c
+    mkShowDpiContext.bat  compiling ShowDpiContext
+           nfoGetVer.c    Program to get version with GetVersionExA
+       nfoGetVHelper.c    Program to use Windows Version Helper (recommended)
+      ShowDpiContext.c    Program to obtain DPI Awareness from Windows.
 
-           W10-2023-10-15-1034-110dpi-Scaled.png   918x707 in pixels
+     W10-2023-10-15-1034-110dpi-Scaled.png   918x707 in pixels
                Lack of VCrayConfirm 0.1.15 scaling is not problematic
-           W10-2023-10-15-1037-SystemDisplay.png   492x491 in pixels
+     W10-2023-10-15-1037-SystemDisplay.png   492x491 in pixels
      W10-2023-10-20-1208-WindowsHDSettings01.png 1032 x 981 in pixels
      W10-2023-10-20-1208-WindowsHDSettings01.png 1032 x 1310 in pixels
                Captures on the display-level treatment of HDR, W10/W11
-         W10-2023-10-21-0918-DisplaySettings.png 1032 x 1136 in pixels
-         W10-2023-10-21-0910-AdvancedScaling.png 1032 x 1136 in pixels
+     W10-2023-10-21-0918-DisplaySettings.png 1032 x 1136 in pixels
+     W10-2023-10-21-0910-AdvancedScaling.png 1032 x 1136 in pixels
                More Details on the Display Settings dialogs for Windows 10/11
-           W11-2023-10-15-1006-200dpi-Scaled.png  1236x1020 in pixels
+     W11-2023-10-15-1006-200dpi-Scaled.png  1236x1020 in pixels
                Lack of VCrayConfirm 0.1.15 scaling is a serious defect
-           W11-2023-10-15-1009-SystemDisplay.png   1682x500 in pixels
-    W11-2023-10-21-1217-RecommendedStreaming.png  2204 x 1564 in pixels
+     W11-2023-10-15-1009-SystemDisplay.png   1682x500 in pixels
+     W11-2023-10-21-1217-RecommendedStreaming.png  2204 x 1564 in pixels
     W11-2023-10-21-1221-HDRDisplayLimitation.png  1717 x 1436 in pixels
- W11-2023-`0-21-1225-HDRStreamingCalibration.png  2367 x 1573 in pixels
+    W11-2023-`0-21-1225-HDRStreamingCalibration.png  2367 x 1573 in pixels
 
-W11xW10-2023-10-15-1700-SideBySideNormalized.png (view at 100%)
-    This demonstrates the two Scaled images adjusted so they appear at the
-    same DPI, whatever resolution this is viewed at.  Notice that scaling is
-    done by Windows for GUI elements, but for raster images created using
-    fixed dimensions in pixels there is no automatic-scaling to adjust for
-    differences in display resolution and any user-selected GUI scaling.  The
-    200dpi image does show that the GUI elements of the frame, such as the
-    title bar, are scaled.  That doesn't happen for some apps.
+    W11xW10-2023-10-15-1700-SideBySideNormalized.png (view at 100%)
+        This demonstrates the two Scaled images adjusted so they appear at the
+        same DPI, whatever resolution this is viewed at.  Notice that scaling
+        is done by Windows for GUI elements, but for raster images created
+        using fixed dimensions in pixels there is no automatic-scaling to
+        adjust for differences in display resolution and any user-selected
+        GUI scaling.  The 200dpi image does show that the GUI elements of the
+        frame, such as the title bar, are scaled.  That doesn't happen for
+        some apps.
 
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
@@ -147,6 +164,7 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.10 2023-11-18T20:42Z Bring current, lookat scale factor recovery
  0.0.9 2023-10-24T15:12Z TODOs on probing feature detection
  0.0.8 2023-10-21T20:45Z Touch-up
  0.0.7 2023-10-21T19:48Z Add W11 HDR captures
