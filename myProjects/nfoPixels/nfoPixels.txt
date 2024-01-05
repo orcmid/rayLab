@@ -1,4 +1,4 @@
-nfoPixels.txt 0.0.10                 UTF-8                         2023-11-18
+nfoPixels.txt 0.0.11                 UTF-8                         2024-01-05
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -97,8 +97,8 @@ MANIFEST
                Lack of VCrayConfirm 0.1.15 scaling is a serious defect
      W11-2023-10-15-1009-SystemDisplay.png   1682x500 in pixels
      W11-2023-10-21-1217-RecommendedStreaming.png  2204 x 1564 in pixels
-    W11-2023-10-21-1221-HDRDisplayLimitation.png  1717 x 1436 in pixels
-    W11-2023-`0-21-1225-HDRStreamingCalibration.png  2367 x 1573 in pixels
+     W11-2023-10-21-1221-HDRDisplayLimitation.png  1717 x 1436 in pixels
+     W11-2023-`0-21-1225-HDRStreamingCalibration.png  2367 x 1573 in pixels
 
     W11xW10-2023-10-15-1700-SideBySideNormalized.png (view at 100%)
         This demonstrates the two Scaled images adjusted so they appear at the
@@ -113,7 +113,7 @@ MANIFEST
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
-                            2023 Dennis E. Hamilton
+                           2023-2024 Dennis E. Hamilton
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -132,12 +132,17 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. nfoPixels Graphical Display Normalizer.  rayLab project
-   text file nfoPixels.txt version 0.0.9 dated 2023-10-24, available on the
+   text file nfoPixels.txt version 0.0.11 dated 2024-01-05, available on the
    Internet as a version of
-
  <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/nfoPixels.txt>
 
 TODO
+
+ * IMPORTANT: The resetting of nfoPixels should allow the user to specify the
+   understood resolution that the program is created for.  Otherwise, the
+   default resolution will be employed.  Because we don't expect the caller
+   to have access to the library definition, we also need a call that
+   provides the libraries default DPI setting.
 
  * Research the Win32 libraries and discern the discoverable features going
    back to at least Windows 7.  This will be documented in Win32-display.txt
@@ -161,9 +166,18 @@ TODO
    compile time.  Others depend on determining that a Windows .dll entry
    point is defined.  I would like to avoid that last situation.
 
+ * The default setup is always with no scaling.  That will change with the
+   Refresh command.  This will also be useful if the default screen is changed
+   or the scaling changes in some way. The 1.0 API is intended to stay simple
+   in this way.
+
+ * A short prefix might be npx with whatever operations there are for that
+   interface.  Maybe that is all for the integer Pixel scaling of integers.
+
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.0.11 2024-01-05T17:02Z Update TODOs, consider getting/setting dpi assumed
  0.0.10 2023-11-18T20:42Z Bring current, lookat scale factor recovery
  0.0.9 2023-10-24T15:12Z TODOs on probing feature detection
  0.0.8 2023-10-21T20:45Z Touch-up
