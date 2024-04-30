@@ -1,1 +1,1 @@
-cl npxShow.c nfoPixels.c
+cl npxShow.c nfoPixels-Win32.c

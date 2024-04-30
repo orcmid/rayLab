@@ -1,4 +1,4 @@
-nfoPixels.txt 0.0.11                 UTF-8                         2024-01-05
+nfoPixels.txt 0.1.0                 UTF-8                         2024-04-30
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
                          Native Windows raylib Laboratory
@@ -23,17 +23,20 @@ nfoPixels.txt 0.0.11                 UTF-8                         2024-01-05
  <https://en.wikipedia.org/wiki/Dots_per_inch#Computer_monitor_DPI_standards>.
 
     For every platform, the scaling business needs to be addressed in a way
-    that has desktop builds of the same program produce visually-comparable
-    display results when operated on computers with different displays.
+    that has desktop builds of a single program produce visually-comparable
+    display results when installed unchanged on computers having different
+    displays.  nfoPixels provides functions for accomplishing that run-time
+    accomodation of display characteristics and the display intended by the
+    program author.
 
     The architecture of nfoPixels allows for customization to support more
-    platforms by additions, preserving the API as portable.  The base
+    platforms by additions, preserving a portable API.  The reference
     implementation is specific to Windows desktop applications because I have
     no means to support other cases.
 
     nfoPixels will be included in the VCrayApp cache for employment in
     VCrayConfirm compilations, demonstrating its effectiveness for VCrayApp
-    projects.
+    projects on the Win32 platform and VS Build Tools featured with VCrayApp.
 
     AVOIDING MISSION CREEP: It is important to have a confirmed understanding
     of the Microsoft Windows cases for execution on Windows 7 and later.  The
@@ -61,9 +64,16 @@ nfoPixels.txt 0.0.11                 UTF-8                         2024-01-05
     THAT HAVING BEEN SAID: This is the 1.0 scoping.  It is important to learn
     about more-advanced situations and see what might be done for them.  It
     is not urgent and the 1.0 API will be rigorously preserved.  We only have
-    this because we do need to want apps to appear properly when installed on
-    computers having varying display characteristics that impact the usability
-    of the raylib app.
+    this because we want single platform-specific executables to appear
+    properly and automatically when installed on computers having varying
+    display characteristics that impact the usability of the raylib app.
+
+    nfoPixels is offered as a companion to raylib and similar graphical-
+    application APIs.  There are no modifications or customizations to raylib.
+    This does mean that application developers must rely on the nfoPixels
+    API as part of their use of raylib API functions. nfoPixels operates
+    independently of raylib, which need not be initialized for nfoPixels to
+    operate correctly.
 
     ABOUT SCREEN CAPTURES.  What is to be understood about the different
     screen captures is difficult to understand if the DPI and scaling are not
@@ -73,15 +83,21 @@ nfoPixels.txt 0.0.11                 UTF-8                         2024-01-05
 
 MANIFEST
 
-        nfoPixels.txt  This synopsis and manifest
+           nfoPixels.txt  This synopsis and manifest
 
-    Win32-display.txt  Analysis for Win32 Display Characteristics Detection
+       Win32-display.txt  Analysis for Win32 Display Characteristics Detection
 
             mkGetVer.bat  compiling nfoGetVer.c
         mkGetVHelper.bat  compiling nfoGetVHelper.c
+           mknpxShow.bat  compiling npxShow.c
     mkShowDpiContext.bat  compiling ShowDpiContext
            nfoGetVer.c    Program to get version with GetVersionExA
        nfoGetVHelper.c    Program to use Windows Version Helper (recommended)
+           nfoPixels.h    Intended platform-independent API definition
+     nfoPixels-Win32.c    Windows (and Window.h APIs) platform-specific
+                          nfoPixels implementation
+             npxShow.c    Program to demonstrate nfoPixel.h inclusion
+                          and API usage
       ShowDpiContext.c    Program to obtain DPI Awareness from Windows.
 
      W10-2023-10-15-1034-110dpi-Scaled.png   918x707 in pixels
@@ -132,7 +148,7 @@ MANIFEST
  ATTRIBUTION
 
    Hamilton, Dennis E. nfoPixels Graphical Display Normalizer.  rayLab project
-   text file nfoPixels.txt version 0.0.11 dated 2024-01-05, available on the
+   text file nfoPixels.txt version 0.1.0 dated 2024-04-30, available on the
    Internet as a version of
  <https://github.com/orcmid/rayLab/blob/main/projects/nfoPixels/nfoPixels.txt>
 
@@ -177,6 +193,8 @@ TODO
 
 *---|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
 
+ 0.1.0  2024-04-30T16:50Z Update the manifest, reflect nfoPixel-Win32.c
+        platforming, and touch-up the notes to reflect my intention better
  0.0.11 2024-01-05T17:02Z Update TODOs, consider getting/setting dpi assumed
  0.0.10 2023-11-18T20:42Z Bring current, lookat scale factor recovery
  0.0.9 2023-10-24T15:12Z TODOs on probing feature detection
