@@ -1,4 +1,4 @@
-/* nfoPixels.h 0.0.1                UTF-8                         2024-05-01
+/* nfoPixels.h 0.0.2                UTF-8                         2024-05-02
  * -|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
  *
  *                    STUB NFOPIXELS API DECLARATIONS
@@ -22,12 +22,13 @@
  *       parameters to automatically accomodate run-time differences of
  *       monitor DPI values in a single executable for a given platform.
  *
- *   DIFFICULTIES: There is a difference between pixel specifications of
+ *   CHALLENGES: There is a difference between pixel specifications of
  *       height and width expectations and pixel specification of coordinates.
  *       Although nfoPixels functions can be used to correctly scale either
  *       type of pixel number, the application does have to be aware
- *       that some values provided by graphical operations may need to be
- *       "descaled" to the DpiAssumption.
+ *       that some values returned by graphical-operations may need to be
+ *       "descaled" to the DpiAssumption so the application developers do
+ *       not have to lose their minds over this.
  *
  *       nfoPixel protects against scaled values for lengths and coordinates
  *       that would be out of the actual monitor's range by clamping some
@@ -35,7 +36,16 @@
  *
  *       it is also desirable to carry out some drawing operations in the
  *       actual screen resolution in order to gain as much smoothness as
- *       possible in the drawing and movement of shapes.
+ *       possible in the drawing and movement of shapes.  This is where the
+ *       application developer will have to cope with coordinate system
+ *       differences/transformations that might be required.  nfoPixels will
+ *       provide sufficient information to make these transformations as
+ *       simple as possible.
+ *
+ *       Another situation to be conquered is the fact that some GPUs and
+ *       monitors do some scaling automatically.  The result is generally
+ *       unpleasant since the application is unaware that the result can be
+ *       distorted.  We need a fail-safe around that.
  *
  *       Guidance for these challenges will be investigated.  The goal is to
  *       avoid surprising and not-understood edge cases for users by having
@@ -44,10 +54,10 @@
  *   PERFORMANCE CONSIDERATION: The pixel-unit translations for scaling are
  *       all carried out using integer arithmetic.  In cases where scaling
  *       is not needed, values will be returned unchanged. Scaling is also not
- *       over-precise although consistent and not more than 10% below the
- *       target DpiAssumption.  All rounding is toward 0 to avoid exceeding
- *       the specified bounds for the display widnow, whether full-screen or
- *       smaller.
+ *       over-precise although consistent and with the visual display not more
+ *       than 10% below the target DpiAssumption. All rounding is toward 0 to
+ *       avoid exceeding the specified bounds for an application's display
+ *       window, whether full-screen or smaller.
  */
 
 #ifdef __cplusplus
@@ -55,12 +65,14 @@ extern "C" {
 #endif
 
 int npxDpiDefault(void);
-    // Return the system default DPI for desktop display devices.
+    // Return the system default DPI for desktop display devices.  This is a
+    // portability provision related to how application developers might be
+    // accustomed to expect a particular automatic display quality.
 
 int npxSetDpiAssumption(int dpi);
     //     dpi is the dpi that pixel-unit operations of the application
     //         are intended to apply to.  Otherwise, nfoPixels functions
-    //         will default to an assumed npxDpiDefault() scaled by 1.
+    //         will default to npxDpiDefault() scaled by 1.
     //
     //  result is the actual DPI that nfoPixel is set to scale toward, but
     //         never less than npxDpiDefault().
@@ -88,7 +100,7 @@ int npxRecalibrate(void);
     //  CAVEAT: nfoPixels does not detect any changes in the current monitor.
     //          It also has no hand in how drawing needs to be quickly
     //          adjusted/re-done upon changes of display monitor and/or its
-    //          characteristics.
+    //          settings.
 
 
 #ifdef __cplusplus
@@ -96,6 +108,7 @@ int npxRecalibrate(void);
 #endif
 
 /*
+ *  0.0.2 2024-05-02T16:51Z Tweaking of comments
  *  0.0.1 2024-05-01T20:08Z Add some preliminary functions and comments.
  *  0.0.0 2024-01-05T19:02Z Demonstration Stub
  *
