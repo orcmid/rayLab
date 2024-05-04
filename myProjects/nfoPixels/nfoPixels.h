@@ -1,4 +1,4 @@
-/* nfoPixels.h 0.0.3                UTF-8                         2024-05-02
+/* nfoPixels.h 0.0.4                UTF-8                         2024-05-04
  * -|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
  *
  *                    STUB NFOPIXELS API DECLARATIONS
@@ -22,17 +22,25 @@
  *       parameters to automatically accomodate run-time differences of
  *       monitor DPI values in a single executable for a given platform.
  *
+ *   DISCLAIMER: nfoPixels is not a complete solution for all DPI scaling
+ *      issues.  nfoPixels is limited to applications that operate on a single
+ *      display monitor where none of actual DPI, width, and height exceed
+ *      INT_MAX at any time.  nfoPixels does not automatically detect changes
+ *      in the display monitor or its settings.
+ *
  *   CHALLENGES: There is a difference between pixel specifications of
  *       height and width expectations and pixel specification of coordinates.
  *       Although nfoPixels functions can be used to correctly scale either
  *       type of pixel number, the application does have to be aware
- *       that some values returned by graphical-operations may need to be
- *       "descaled" to the DpiAssumption so the application developers do
- *       not have to lose their minds over this.
+ *       that some values returned by graphical-operations (such as mouse
+ *       positions) may need to be "descaled" to the DpiAssumption so the
+ *       application developers do not have to lose their minds over this.
  *
- *       nfoPixel protects against scaled values for lengths and coordinates
- *       that would be out of the actual monitor's range by clamping some
- *       scaled values to remain within the actual monitor's range.
+ *       To provide minimal impact on application performance, nfoPixels does
+ *       not check and protect against scaled values for lengths and positions
+ *       that are outside of the display area allocated to the application.
+ *       There are some nfoPixels functions that an application can employ to
+ *       ensure that breaching the display area is not attempted.
  *
  *       it is also desirable to carry out some drawing operations in the
  *       actual screen resolution in order to gain as much smoothness as
@@ -52,11 +60,12 @@
  *       nfoPixels work as simple as possible but not invisibly.
  *
  *   PERFORMANCE CONSIDERATION: The pixel-unit translations for scaling are
- *       all carried out using integer arithmetic.  In cases where scaling
- *       is not needed, values will be returned unchanged. Scaling is also not
- *       over-precise although consistent and with the visual display not more
- *       than 10% below the target DpiAssumption. All rounding is toward 0 to
- *       avoid exceeding the specified bounds for an application's display
+ *       all carried out using integer arithmetic and rationale number scales.
+ *       In cases where scaling is not needed, values will be returned
+ *       unchanged. Non-integer scaling multipliers are not overly-precise;
+ *       they will be consistent and achieve actual display not more than 10%
+ *       below the target DpiAssumption. Any rounding is toward 0 to avoid
+ *       exceeding the specified bounds for an application's display
  *       window, whether full-screen or smaller.
  */
 
@@ -70,11 +79,13 @@ unsigned long npxDpiDefault(void);
     // accustomed to expect a particular automatic display quality.
 
 unsigned long npxSetDpiAssumption(unsigned long dpi);
+                                  unsigned long width,
+
     //     dpi is the dpi that pixel-unit operations of the application
     //         are intended to apply to.  Otherwise, nfoPixels functions
     //         will default to npxDpiDefault() scaled by 1.
     //
-    //  result is the actual DPI that nfoPixel is set to scale toward, but
+    //  result is the actual DPI that nfoPixels is set to scale toward, but
     //         never less than npxDpiDefault().
     //
     //         If npxSetDpiAssumption() is not performed (yet), nfoPixels
@@ -89,11 +100,7 @@ unsigned long npxSetDpiAssumption(unsigned long dpi);
     //
     //  CAVEAT: nfoPixels does not detect monitor changes and uses the
     //          current monitor (usually where the OS cursor is whenever
-    //          npxSetDpiAssumption() and npxRecalibrate() are performed.
-    //
-    //  WARNING: Although DPIs are generally much smaller than a platform's
-    //           MAX_INT value, some of the usages of int instead of
-    //           unsigned long operations of nfoPixels may be a problem.
+    //          npxSetDpiAssumption() and npxRecalibrate() are performed).
 
 unsigned long npxRecalibrate(void);
     // Recalibrate the nfoPixels scaling factor for the current monitor.
@@ -101,7 +108,7 @@ unsigned long npxRecalibrate(void);
     // or the monitor's DPI setting is changed.
     //
     //  result is the actual DPI that nfoPixel is now set to scale toward
-    //         based on the existing DpiAssumption (possibly the default).
+    //         based on the current DpiAssumption (possibly the default).
     //
     //  Performing npxSetDpiAssumption() is also a way to recalibrate the
     //  nfoPixels scaling factor for the (now) current monitor.
@@ -115,15 +122,15 @@ int npxH(int hAssumed);
 int npxW(int wAssumed);
 
     //     hAssumed is the height in pixels that the application is
-    //         assuming for a particular drawing parameter.
+    //         assuming for a particular 2D drawing parameter.
     //
     //     wAssumed is the width in pixels that the application is
-    //         assuming for a particular drawing parameter.
+    //         assuming for a particular 2D drawing parameter.
     //
     //  result is the height or width in pixels that the application should
     //         use for the actual drawing operation on the current monitor.
     //
-    //  Negative values of hAssumed and wAssumed are silently treated as 0.
+    //  Negative values of hAssumed and wAssumed are not prevented.
     //
     //  EXAMPLE: With raylib, the initialization of a Window can be adapted
     //           to the actual monitor's DPI by using something like
@@ -131,17 +138,11 @@ int npxW(int wAssumed);
     //           InitWindow(npxW(800), npxH(600), "Hello, World!");
     //
     //           Note that the title bar of the window and the readability
-    //           of "Hello, World!" are not handled by nfoPixels.
+    //           of "Hello, World!" are not scaled by raylib.
     //
     //  Although most displays have the same DPI in the horizontal and
     //  vertical directions, nfoPixels allows for there being differences,
     //  requiring different scalings.
-    //
-    //  CAVEAT: nfoPixels will clamp the results so that actual pixel
-    //          dimensions of the assumed current monitor are not exceeded.
-    //          This does not correct for the actual pixel dimensions of the
-    //          window that the application is drawing to.
-    //             Something needs to be done about that.
     //
     //  CAVEAT: To work well with raylib, int units are employed.  Although
     //          longs do not have to be larger than ints, it might be valuable
@@ -156,6 +157,7 @@ int npxW(int wAssumed);
 #endif
 
 /*
+ *  0.0.4 2024-05-04T20:53Z Touch-ups and more clarifications in comments
  *  0.0.3 2024-05-02T19:13Z Add npxH, npxW, with expanded commentary and use
  *        of unsigned long for potentially large values in DPI.
  *  0.0.2 2024-05-02T16:51Z Tweaking of comments
