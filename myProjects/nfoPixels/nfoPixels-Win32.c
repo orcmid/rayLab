@@ -1,4 +1,4 @@
-/* nfoPixels-Win32.c 0.1.0          UTF-8                         2024-04-30
+/* nfoPixels-Win32.c 0.1.1          UTF-8                         2025-07-09
  * -|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
  *
  *                   NFOPIXELS WIN32 STUB IMPLEMENTATION
@@ -15,7 +15,7 @@
  *   Note that the header file, nfoPixels.h is used for all platforms. The
  *   compilation of the correct platform-specific implementation is achieved
  *   in the compilation of the appropriate nfoPixels-*.c and linking that
- *   object file into the executable. *
+ *   object file into the executable.
  */
 
 #include "nfoPixels.h"
@@ -23,7 +23,7 @@
 #include <windows.h>
          // for USER_DEFAULT_SCREEN_DPI
 
-int npxDpiDefault(void)
+unsigned npxDpiDefault(void)
   {
     return USER_DEFAULT_SCREEN_DPI;
     // the system default DPI for desktop display devices.
@@ -32,6 +32,7 @@ int npxDpiDefault(void)
 
 
 /*
+ *  0.1.1 2024-07-09T20:06Z Touch-up and match nfoPixels.h prototypes.
  *  0.1.0 2024-04-30T16:17Z Renaming and description of how platform
  *        dependency is isolated and distinguished.
  *  0.0.0 2024-01-05T19:19Z Demonstration Stub

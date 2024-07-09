@@ -1,4 +1,4 @@
-/* nfoPixels.h 0.0.4                UTF-8                         2024-05-04
+/* nfoPixels.h 0.0.5                UTF-8                         2024-07-09
  * -|----1----|----2----|----3----|----4----|----5----|----6----|----7----|--*
  *
  *                    STUB NFOPIXELS API DECLARATIONS
@@ -60,7 +60,7 @@
  *       nfoPixels work as simple as possible but not invisibly.
  *
  *   PERFORMANCE CONSIDERATION: The pixel-unit translations for scaling are
- *       all carried out using integer arithmetic and rationale number scales.
+ *       all carried out using integer arithmetic and rational-number scales.
  *       In cases where scaling is not needed, values will be returned
  *       unchanged. Non-integer scaling multipliers are not overly-precise;
  *       they will be consistent and achieve actual display not more than 10%
@@ -73,14 +73,12 @@
 extern "C" {
 #endif
 
-unsigned long npxDpiDefault(void);
+unsigned npxDpiDefault(void);
     // Return the system default DPI for desktop display devices.  This is a
     // portability provision related to how application developers might be
     // accustomed to expect a particular automatic display quality.
 
-unsigned long npxSetDpiAssumption(unsigned long dpi);
-                                  unsigned long width,
-
+unsigned npxSetDpiAssumption(unsigned dpi);
     //     dpi is the dpi that pixel-unit operations of the application
     //         are intended to apply to.  Otherwise, nfoPixels functions
     //         will default to npxDpiDefault() scaled by 1.
@@ -102,7 +100,7 @@ unsigned long npxSetDpiAssumption(unsigned long dpi);
     //          current monitor (usually where the OS cursor is whenever
     //          npxSetDpiAssumption() and npxRecalibrate() are performed).
 
-unsigned long npxRecalibrate(void);
+unsigned npxRecalibrate(void);
     // Recalibrate the nfoPixels scaling factor for the current monitor.
     // This is useful when the application is moved to a different monitor
     // or the monitor's DPI setting is changed.
@@ -131,6 +129,9 @@ int npxW(int wAssumed);
     //         use for the actual drawing operation on the current monitor.
     //
     //  Negative values of hAssumed and wAssumed are not prevented.
+    //  There is no protection against exceeding the display area.
+    //  XXX: There might be some sort of clamping to not exceed the display
+    //       and to stay non-negative.
     //
     //  EXAMPLE: With raylib, the initialization of a Window can be adapted
     //           to the actual monitor's DPI by using something like
@@ -157,6 +158,7 @@ int npxW(int wAssumed);
 #endif
 
 /*
+ *  0.0.5 2024-07-09T20:05Z Touch-up, consideration of clamping to display
  *  0.0.4 2024-05-04T20:53Z Touch-ups and more clarifications in comments
  *  0.0.3 2024-05-02T19:13Z Add npxH, npxW, with expanded commentary and use
  *        of unsigned long for potentially large values in DPI.
