@@ -15,7 +15,7 @@ Comments are welcome under the project Issues and Discussion topics.  Pull-reque
 
 ## Reporting a Vulnerability
 
-Please confine vulnerability reporting Orcmid on GitHub projects that have supported releases.  If you believe there is still need to engage in
+Please confine vulnerability reporting to Orcmid on GitHub projects that have supported releases.  If you believe there is still need to engage in
 private discussion about a potential threat or threat-surface defect here on rayLab, please use the GitHub
 vulerability reporting provision of this project's Security tab.
 
